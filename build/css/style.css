@@ -563,3 +563,8 @@ button,
   margin: 0 auto;
   padding: 0 40px;
 }
+@media (max-width: 1365px) {
+  .container {
+    padding: 0 103px;
+  }
+}
