@@ -28,3 +28,63 @@ $iconOnLightBg: #102654;
 //form
 $mainColor: #ffffff;
 $errorColor: #ff121f;
+
+
+// Typography
+
+$ff-rouble: "Rouble", "Arial", sans-serif;
+
+$alumniSans: "AlumniSans", "Arial", sans-serif;
+$robotoCondensed: "RobotoCondensed", "Tahoma", sans-serif;
+
+$fzDefault: 18px;
+
+$h1fzDesktop: 92px;
+$h1lhDesktop: 1.2;
+$h1fzTablet: 72px;
+
+$h2fzDesktop: 82px;
+$h2lhDesktop: 0.93;
+$h2fzTablet: 48px;
+$h2lhTablet: 0.96;
+
+$h3fzDesktop: 54px;
+$h3lhDesktop: 1;
+$h3fzTablet: 42px;
+$h3fzMobile: 32px;
+
+$h4fzDesktop: 26px;
+$h4lhDesktop: 1;
+
+$h5fzDesktop: 24px;
+$h5lhDesktop: 1;
+$h5fzMobile: 20px;
+
+$h6fzDesktop: 22px;
+$h6lhDesktop: 1;
+$h6fzTablet: 20px;
+$h6fzMobile: 18px;
+$h6lhMobile: 1.11;
+
+$textRegularFzDesktop: 16px;
+$textRegularLhDesktop: 1.5;
+$textSmallFzDesktop: 14px;
+$textSmallLhDesktop: 1.57;
+
+$numberXLfz: 100px;
+$numberXLfzMobile: 80px;
+$numberLargeFz: 70px;
+$numberLargeFzMobile: 64px;
+$numberMediumFz: 60px;
+$numberMediumFzMobile: 48px;
+$numberRegularFz: 40px;
+$numberRegularFzMobile: 24 px;
+
+$numberLh: 1;
+
+
+// Viewports
+
+$vp-320: 320px;
+$vp-768: 768px;
+$vp-1366: 1366px;
