@@ -12,8 +12,6 @@
   justify-content: center;
   width: 25px;
   height: 25px;
-  border-radius: 50%;
-  background-color: $mainColorBg;
 
   @include vp-767 {
     margin-top: 40px;
@@ -26,5 +24,33 @@
   height: 25px;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background-color: $mainColorBg;
+
+  &:hover {
+    background-color: $additionalAccentText;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $additionalAccentText;
+  }
+
+  &:active {
+    background-color: $mainColorText;
+  }
+}
+
+.social-list__link:hover .social-list__icon {
+  fill: $mainColorBg;
+}
+
+.social-list__link:focus-visible .social-list__icon {
+  outline: none;
+  fill: $mainColorBg;
+}
+
+.social-list__link:active .social-list__icon {
+  fill: $mainColorBg;
 }
 

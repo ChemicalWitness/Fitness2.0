@@ -31,11 +31,26 @@
 }
 
 .menu__link {
+  padding: 3px 0;
+
   @include font(400, $textSmallFzDesktop, 16px);
   color: $textOnDarkBg;
 
   @include vp-767 {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  @include hover {
+    border-bottom: 1px $borderOnDarkBg solid;
+  }
+
+  &:focus-visible {
+    outline: 1px $borderOnDarkBg solid;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    cursor: default;
   }
 }
