@@ -33,7 +33,7 @@
 .menu__link {
   padding: 3px 0;
 
-  @include font(400, $textSmallFzDesktop, 16px);
+  @include font(400, 14px, 16px);
   color: $textOnDarkBg;
 
   @include vp-767 {

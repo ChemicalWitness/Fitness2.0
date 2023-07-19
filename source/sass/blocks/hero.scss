@@ -1,0 +1,133 @@
+.hero {
+  width: 100%;
+  font-family: $alumniSans;
+  color: $textOnDarkBg;
+}
+
+.hero__wrapper {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-right: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+
+
+  @include vp-1365 {
+    margin: 0;
+    gap: 30px;
+    margin-bottom: 82px;
+    justify-content: center;
+  }
+}
+
+.hero__wrapper picture {
+  margin-top: -20px;
+
+  @include vp-1365 {
+    margin: 0;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.hero__inner-wrapper {
+  position: relative;
+  margin-top: 78px;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+
+  @include vp-1365 {
+    margin: 0;
+    padding: 0;
+    align-items: flex-end;
+  }
+}
+
+.hero__subtitle {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+  padding-right: 50px;
+  max-width: 133px;
+  align-self: flex-end;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 1.44px;
+  text-transform: lowercase;
+
+  @include vp-1365 {
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.hero__title {
+  max-width: 300px;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  align-self: flex-end;
+  text-align: end;
+  font-size: 92px;
+  line-height: 110px;
+  font-weight: 600;
+  letter-spacing: 4.6px;
+  text-transform: uppercase;
+  stroke-width: 2px;
+
+  @include vp-1365 {
+    font-size: 72px;
+    line-height: 86px;
+    stroke-width: 2px;
+  }
+}
+
+.hero__text {
+  position: absolute;
+  left: 20px;
+  bottom: 190px;
+  margin: 0;
+  text-align: end;
+  font-family: $robotoCondensed;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  @include vp-1365 {
+    left: 0;
+  }
+
+  @include vp-767 {
+    bottom: 170px;
+  }
+}
+
+
+.hero__button {
+  padding: 24px 56px;
+  color: $textOnDarkBg;
+  border: 4px $borderOnDarkBg solid;
+
+  @include vp-1365 {
+    max-width: 190px;
+    padding: 24px 32px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    width: 100%;
+    padding: 25px 80px;
+  }
+}
