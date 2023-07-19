@@ -975,6 +975,16 @@ button,
     padding: 25px 80px;
   }
 }
+.hero__button:hover, .hero__button:focus-visible {
+  background-color: #ffffff;
+  color: #103aae;
+}
+.hero__button:active {
+  color: #102654;
+}
+.hero__button:disabled {
+  opacity: 0.5;
+}
 
 .btn {
   margin: 0;

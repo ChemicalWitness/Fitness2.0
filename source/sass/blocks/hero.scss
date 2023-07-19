@@ -130,4 +130,18 @@
     width: 100%;
     padding: 25px 80px;
   }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $mainColor;
+    color: $additionalAccentText;
+  }
+
+  &:active {
+    color: $mainColorText;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 }
