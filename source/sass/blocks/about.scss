@@ -201,3 +201,54 @@
     left: 0;
   }
 }
+
+.about__video-link:hover + .about__video-button svg,
+.about__video-button:hover svg {
+  .about__inner-video-button-big-circle {
+    stroke: $mainColorText;
+    stroke-opacity: 1;
+  }
+
+  .about__inner-video-button-small-circle {
+    fill: $mainColor;
+  }
+
+  .about__inner-video-button-triangle {
+    fill: $mainColorText;
+  }
+}
+
+.about__video-button:focus-visible {
+  outline: none;
+
+  svg .about__inner-video-button-big-circle {
+    stroke: $mainColorText;
+    stroke-opacity: 1;
+  }
+
+  .about__inner-video-button-small-circle {
+    fill: $mainColor;
+  }
+
+  .about__inner-video-button-triangle {
+    fill: $mainColorText;
+  }
+}
+
+.about__video-button:disabled {
+  opacity: 0.4;
+
+  svg .about__inner-video-button-big-circle {
+    stroke: $mainColorText;
+    stroke-opacity: 1;
+  }
+
+  .about__inner-video-button-small-circle {
+    fill: $mainColor;
+  }
+
+  .about__inner-video-button-triangle {
+    fill: $mainColorText;
+  }
+
+}
