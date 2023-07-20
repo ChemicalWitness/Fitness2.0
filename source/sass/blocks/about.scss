@@ -79,6 +79,10 @@
   margin: 0;
   padding: 0;
 
+  &--on-desktop {
+    margin-top: 20px;
+  }
+
   @include font(300, 16px, 24px);
 
   @include vp-1365 {
@@ -95,6 +99,7 @@
 }
 
 .about__multi-wrapper {
+  position: relative;
   margin-top: 120px;
   margin-right: 103px;
   margin-bottom: 235px;
@@ -105,6 +110,94 @@
   }
 
   @include vp-767 {
-    margin-bottom: 277px;
+    margin-bottom: 70px;
+  }
+}
+
+.about__video {
+  margin-top: 40px;
+}
+
+
+.about__video-link {
+  position: absolute;
+  top: 288px;
+  left: -50px;
+
+  @include vp-1365 {
+    top: 261px;
+    left: 206px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #14367a;
+    opacity: 0.5;
+  }
+}
+
+.about__video-button {
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 352px;
+  left: 70px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include vp-1365 {
+    width: 73px;
+    height: 73px;
+    top: 308px;
+    left: 302px;
+  }
+
+  @include vp-767 {
+    top: 400px;
+    left: 124px;
+  }
+}
+
+.about__video-button svg {
+  @include vp-1365 {
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.about__video-media {
+  border: none;
+  position: absolute;
+  width: 364px;
+  height: 228px;
+  top: 288px;
+  left: -50px;
+
+  @include vp-1365 {
+    width: 266px;
+    height: 167px;
+    top: 261px;
+    left: 206px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    width: 100%;
+    height: 167px;
+    top: 0;
+    left: 0;
   }
 }

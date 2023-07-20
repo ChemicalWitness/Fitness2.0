@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
+import { findVideo } from './modules/form-validate/video';
 
 // ---------------------------------
 
@@ -8,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
+  findVideo();
   iosVhFix();
 
   // Modules
@@ -20,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    findVideo();
   });
 });
 
