@@ -1,0 +1,166 @@
+.programm {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1365 {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.programm__item {
+  width: 360px;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $mainColorBg;
+
+  z-index: 5;
+
+  @include vp-1365 {
+    width: 442px;
+    margin-top: 45px;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 100px;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 70px;
+    }
+  }
+}
+
+.programm__link {
+  padding: 68px 77px;
+  text-align: center;
+
+  @include vp-1365 {
+    padding: 68px 118px;
+  }
+
+  @include vp-767 {
+    padding: 55px 42px;
+  }
+}
+
+.programm__link:hover,
+.programm__link:focus-visible {
+  padding-top: 61px;
+  padding-bottom: 61px;
+  border: 7px solid;
+  border-image-slice: 1;
+  border-image-source: conic-gradient(from 151deg at 16.03% 39.06%, #003d85 32.24deg, #b80027 304deg, #003d85 360deg);
+  outline: none;
+
+  @include vp-767 {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .programm__button {
+    color: $textOnDarkBg;
+    background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  }
+}
+
+.programm__link:active > .programm__button span {
+  opacity: 0.7;
+}
+
+.programm__link--disabled,
+.programm__link--disabled .programm__button {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.programm__title {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+
+  @include font(700, 26px, 30px);
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+
+.programm__text {
+  margin: 0;
+  margin-bottom: 96px;
+  padding: 0;
+
+  @include font(400, 16px, 24px);
+}
+
+.programm__price-block {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.programm__price-block svg {
+  @include vp-767 {
+    width: 24px;
+    height: 33px;
+  }
+}
+
+.programm__price {
+  display: inline-block;
+  margin-right: 14px;
+
+  @include font(700, 60px, 90px);
+  color: $additionalAccentText;
+  z-index: 10;
+
+  @include vp-767 {
+    margin-right: 10px;
+
+    font-size: 48px;
+    line-height: 72px;
+  }
+
+  &--bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 100px;
+    line-height: 150px;
+    color: #e8e8e8;
+    opacity: 0.47;
+    z-index: -1;
+
+    @include vp-767 {
+      font-size: 80px;
+      line-height: 120px;
+      left: 20px;
+    }
+  }
+}
+
+.programm__button {
+  width: 206px;
+  padding: 25px 37px;
+  border: 2px solid #102654;
+}
+
