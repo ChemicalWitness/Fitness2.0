@@ -42,12 +42,6 @@
   @include font(400, 20px, 30px);
   color: $mainColorText;
 
-
-  &--active {
-    opacity: 1;
-    border-bottom: 2px #d10a42 solid;
-  }
-
   @include vp-1365 {
     font-size: 18px;
     line-height: 27px;
@@ -57,6 +51,11 @@
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+.mounts-list__button.is-active {
+  opacity: 1;
+  border-bottom: 2px #d10a42 solid;
 }
 
 .mounts-list__button:hover:not(:disabled),
