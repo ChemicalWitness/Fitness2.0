@@ -1630,6 +1630,8 @@ button,
 @media (max-width: 767px) {
   .programm__link:hover,
 .programm__link:focus-visible {
+    padding-top: 48px;
+    padding-bottom: 48px;
     padding-left: 35px;
     padding-right: 35px;
   }
