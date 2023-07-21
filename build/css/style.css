@@ -375,6 +375,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 html {
@@ -1413,6 +1414,10 @@ button,
   background-color: #f8f9fc;
 }
 
+.subscriptions__wrapper {
+  position: relative;
+}
+
 .subscriptions__title {
   margin: 0;
   padding: 0;
@@ -1449,6 +1454,23 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.subscriptions__image {
+  position: absolute;
+  bottom: -150px;
+  right: -285px;
+}
+@media (max-width: 1365px) {
+  .subscriptions__image {
+    bottom: -125px;
+    right: -120px;
+  }
+}
+@media (max-width: 767px) {
+  .subscriptions__image {
+    display: none;
+  }
 }
 
 .mounts-list {
