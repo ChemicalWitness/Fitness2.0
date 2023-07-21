@@ -1,0 +1,88 @@
+.events {
+  background-color: $mainColorBg;
+}
+
+.events__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 106px;
+}
+
+.events__game-description {
+  background-color: $bannersBg;
+  color: $textOnDarkBg;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 2fr 1fr 1fr;
+  align-items: center;
+}
+
+.events__title {
+  max-width: 201px;
+  max-height: 158px;
+  margin: 85px 50px 0 78px;
+  padding: 0;
+
+  font-family: $alumniSans;
+  text-transform: uppercase;
+
+  @include font(600, 82px, 78px);
+}
+
+.events__info {
+  display: flex;
+  flex-direction: column;
+  margin: 83px 79px 0 0;
+  gap: 20px 0;
+
+  max-height: 158px;
+}
+
+.events__date > span {
+  display: block;
+  line-height: 27px;
+  height: 17px;
+  margin-bottom: 13px;
+}
+
+.events__date-description {
+  display: grid;
+  grid-template-columns: auto auto;
+  border-top: 1px $borderOnDarkBg solid;
+  padding-top: 10px;
+}
+
+.events__date-description p {
+  margin: 0;
+  grid-row: span 2;
+  justify-self: start;
+  align-self: center;
+
+  @include font(700, 40px, 27px);
+}
+
+.events__date-description span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  align-self: flex-end;
+}
+
+.events__text {
+  grid-column: span 2;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 78px;
+  line-height: 27px;
+  margin-bottom: 40px;
+  align-self: flex-end;
+}
+
+.events__link {
+  grid-column: span 2;
+  justify-self: center;
+  align-self: flex-start;
+  padding: 29px 113px;
+  color: $textOnDarkBg;
+  border: 4px $borderOnDarkBg solid;
+}
