@@ -1775,6 +1775,23 @@ button,
   margin-bottom: 106px;
   margin-top: 120px;
 }
+@media (max-width: 1365px) {
+  .events__wrapper {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .events__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .events__game-description {
   background-color: #ed0233;
@@ -1801,6 +1818,15 @@ button,
   font-size: 82px;
   line-height: 78px;
 }
+@media (max-width: 1365px) {
+  .events__title {
+    justify-self: flex-end;
+    max-width: 117px;
+    margin: 48px 29px 0 45px;
+    font-size: 48px;
+    line-height: 46px;
+  }
+}
 
 .events__info {
   display: -webkit-box;
@@ -1814,12 +1840,26 @@ button,
   gap: 20px 0;
   max-height: 158px;
 }
+@media (max-width: 1365px) {
+  .events__info {
+    margin: 48px 45px 0 0;
+    gap: 13px 0;
+  }
+}
 
 .events__date > span {
   display: block;
   line-height: 27px;
   height: 17px;
   margin-bottom: 13px;
+}
+@media (max-width: 1365px) {
+  .events__date > span {
+    font-size: 12px;
+    line-height: 18px;
+    height: 9px;
+    margin-bottom: 7px;
+  }
 }
 
 .events__date-description {
@@ -1829,6 +1869,11 @@ button,
   grid-template-columns: auto auto;
   border-top: 1px #ffffff solid;
   padding-top: 10px;
+}
+@media (max-width: 1365px) {
+  .events__date-description {
+    padding-top: 5px;
+  }
 }
 
 .events__date-description p {
@@ -1843,6 +1888,12 @@ button,
   font-size: 40px;
   line-height: 27px;
 }
+@media (max-width: 1365px) {
+  .events__date-description p {
+    font-size: 24px;
+    line-height: 17px;
+  }
+}
 
 .events__date-description span {
   display: inline-block;
@@ -1850,6 +1901,13 @@ button,
   line-height: 16px;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+@media (max-width: 1365px) {
+  .events__date-description span {
+    height: 12px;
+    font-size: 10px;
+    line-height: 15px;
+  }
 }
 
 .events__text {
@@ -1862,6 +1920,15 @@ button,
   margin-bottom: 40px;
   align-self: flex-end;
 }
+@media (max-width: 1365px) {
+  .events__text {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 10px 60px 0 45px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
 
 .events__link {
   -ms-grid-column-span: 2;
@@ -1872,4 +1939,12 @@ button,
   padding: 29px 113px;
   color: #ffffff;
   border: 4px #ffffff solid;
+}
+@media (max-width: 1365px) {
+  .events__link {
+    padding: 12px 50px;
+    border: 2px #ffffff solid;
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
