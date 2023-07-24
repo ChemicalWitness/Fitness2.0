@@ -16,6 +16,8 @@
   @include vp-767 {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 63px;
+    margin-top: 70px;
   }
 }
 
@@ -140,6 +142,21 @@
   color: $textOnDarkBg;
   border: 4px $borderOnDarkBg solid;
 
+  &:hover,
+  &:focus-visible {
+    background-color: $mainColor;
+    color: $additionalAccentText;
+  }
+
+  &:active {
+    color: $mainColorText;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
   @include vp-1365 {
     padding: 12px 50px;
     border: 2px $borderOnDarkBg solid;
@@ -148,3 +165,4 @@
     line-height: 12px;
   }
 }
+

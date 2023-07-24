@@ -1,6 +1,7 @@
 // Vendor
 
 @import "./vendor/normalize.scss";
+@import "./vendor/swiper.scss";
 
 // Global
 
@@ -27,3 +28,5 @@
 @import "./blocks/mounts-list.scss";
 @import "./blocks/programm.scss";
 @import "./blocks/events.scss";
+@import "./blocks/slider.scss";
+@import "./blocks/slider-card.scss";
