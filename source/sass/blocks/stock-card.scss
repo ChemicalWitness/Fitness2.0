@@ -1,0 +1,37 @@
+.stock-card {
+  color: #1c3374;
+  border: 7px solid;
+  border-image-slice: 1;
+  border-image-source: conic-gradient(from 151deg at 16.03% 39.06%, #003d85 32.24deg, #b80027 304deg, #003d85 360deg);
+  outline: none;
+}
+
+.stock-card h3 {
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include font(700, 26px, 32px);
+}
+
+.stock-card p {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.stock-card__link {
+  display: block;
+  color: inherit;
+  max-width: 68px;
+
+  @include font(700, 12px, 14px);
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  border-bottom: 1px #1c3374 solid;
+
+  @include vp-767 {
+    margin: 0 auto;
+  }
+}

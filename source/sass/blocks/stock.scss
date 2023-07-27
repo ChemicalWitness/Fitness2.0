@@ -1,0 +1,85 @@
+.stock {
+  background-color: $mainColorBg;
+}
+
+.stock__wrapper {
+  margin-top: 135px;
+  margin-bottom: 120px;
+
+  @include vp-1365 {
+    margin-top: 91px;
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-top: 63px;
+    margin-bottom: 70px;
+  }
+}
+
+.stock__wrapper h2 {
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+
+  font-family: $alumniSans;
+
+  @include font(600, 54px, 65px);
+  text-align: center;
+
+  @include vp-1365 {
+    margin-bottom: 40px;
+
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 1.26px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.stock__inner-wrapper {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+
+  @include vp-1365 {
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    gap: 30px;
+  }
+}
+
+.stock__card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  width: 48%;
+
+  @include vp-1365 {
+    flex-direction: row;
+    width: 100%;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.stock__item {
+  padding: 30px;
+  width: 50%;
+
+  @include vp-767 {
+    width: 100%;
+    text-align: center;
+  }
+}
