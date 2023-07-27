@@ -3451,7 +3451,7 @@ button,
 
 .stock__item {
   padding: 30px;
-  width: 50%;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .stock__item {
@@ -3464,6 +3464,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (max-width: 767px) {
   .stock-main-card {
@@ -3479,6 +3482,20 @@ button,
   padding: 45px;
   background-color: #ed0233;
   color: #ffffff;
+}
+@media (max-width: 767px) {
+  .stock-main-card__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .stock-main-card__description span {
@@ -3527,6 +3544,12 @@ button,
 }
 @media (max-width: 767px) {
   .stock-main-card__link {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .stock-main-card__image {
     margin: 0 auto;
   }
 }
