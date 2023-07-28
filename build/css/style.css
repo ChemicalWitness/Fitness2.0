@@ -1551,6 +1551,49 @@ button,
   overflow-x: hidden;
 }
 
+[data-accordion=element].is-active > [data-accordion=content] {
+  max-height: 100%;
+}
+
+[data-accordion=parent].no-transition [data-accordion=content] {
+  -webkit-transition: none;
+  transition: none;
+}
+
+[data-accordion=content] {
+  max-height: 0;
+  -webkit-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  overflow: hidden;
+}
+
+.accordion {
+  margin: 0 auto 50px auto;
+}
+.accordion .accordion {
+  width: 90%;
+  margin: 0 auto;
+}
+.accordion__element:last-child {
+  margin-bottom: 0;
+}
+.accordion__element {
+  margin-bottom: 34px;
+  padding: 10px;
+}
+.accordion__element.is-active > .accordion__button {
+  opacity: 0.5;
+}
+.accordion__button {
+  width: 100%;
+  padding: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.accordion__wrapper {
+  padding: 10px;
+}
+
 .main-header {
   background: conic-gradient(from 151deg at 16.03% 39.06%, #003D85 32.2363382578deg, #B80027 313.3060026169deg);
 }
@@ -3595,4 +3638,265 @@ button,
   .stock-card__link {
     margin: 0 auto;
   }
+}
+
+.faq {
+  background-color: #f8f9fc;
+}
+
+.faq__wrapper {
+  padding: 120px 0;
+}
+@media (max-width: 1365px) {
+  .faq__wrapper {
+    padding: 100px 0;
+  }
+}
+@media (max-width: 767px) {
+  .faq__wrapper {
+    padding: 70px 0;
+  }
+}
+
+.faq__wrapper h2 {
+  margin: 0;
+  margin-bottom: 39px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  font-family: "AlumniSans", "Arial", sans-serif;
+  letter-spacing: 1.62px;
+}
+@media (max-width: 1365px) {
+  .faq__wrapper h2 {
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 1.26px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .faq__wrapper h2 {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.96px;
+    margin-bottom: 30px;
+  }
+}
+
+.faq__inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 1365px) {
+  .faq__inner-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .faq__inner-wrapper {
+    gap: 30px;
+  }
+}
+
+.faq__category {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.faq__questions-wrapper {
+  width: 100%;
+}
+
+.faq__questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.category-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+@media (max-width: 1365px) {
+  .category-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .category-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.category-list__button {
+  width: 260px;
+  margin: 0;
+  padding: 18px 30px;
+  background-color: transparent;
+  border: 1px rgba(16, 38, 84, 0.2) solid;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media (max-width: 1365px) {
+  .category-list__button {
+    width: 162px;
+  }
+}
+@media (max-width: 767px) {
+  .category-list__button {
+    padding: 14px 10px;
+    width: 140px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.category-list__button:hover:not(:disabled),
+.category-list__button:focus-visible:not(:disabled),
+.category-list__button:active:not(:disabled) {
+  border: 1px rgb(16, 38, 84) solid;
+}
+
+.category-list__button:disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.category-list__button.is-active {
+  background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  color: #ffffff;
+  border: none;
+}
+
+.questions-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.questions-list__item {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px rgba(28, 51, 116, 0.2) solid;
+}
+
+.questions-list__item:first-child {
+  border-top: 1px rgba(28, 51, 116, 0.2) solid;
+}
+
+.questions-list__item h3 {
+  margin: 0;
+  padding: 0;
+  margin-top: 32px;
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+@media (max-width: 767px) {
+  .questions-list__item h3 {
+    width: 238px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.questions-list__item p {
+  margin: 0;
+  margin-bottom: 25px;
+  width: 660px;
+  font-weight: 300;
+  line-height: 25px;
+}
+@media (max-width: 767px) {
+  .questions-list__item p {
+    margin-bottom: 20px;
+    width: 290px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.questions-list__button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 25px;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .questions-list__button {
+    top: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .questions-list__button svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.questions-list__item > .questions-list__button svg:last-child {
+  display: none;
+}
+
+.questions-list__item.is-active > .questions-list__button svg:first-child {
+  display: none;
+}
+
+.questions-list__item.is-active > .questions-list__button svg:last-child {
+  display: block;
+}
+
+.questions-list__item > .questions-list__button:hover:not(:disabled) svg path,
+.questions-list__item > .questions-list__button:focus-visible:not(:disabled) svg path,
+.questions-list__item > .questions-list__button:hover:not(:disabled) svg circle,
+.questions-list__item > .questions-list__button:focus-visible:not(:disabled) svg circle {
+  stroke: #ffffff;
+  fill: #103aae;
+}
+
+.questions-list__item.is-active > .questions-list__button svg:last-child path,
+.questions-list__item.is-active > .questions-list__button svg:last-child circle {
+  stroke: #ffffff;
+  fill: #103aae;
+}
+
+.questions-list__button:disabled {
+  opacity: 0.2;
+  pointer-events: none;
 }

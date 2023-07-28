@@ -13,6 +13,8 @@
 @import "./global/container.scss";
 @import './data-tabs.scss';
 @import "./tabs.scss";
+@import "./data-accordion.scss";
+@import "./accordion.scss";
 
 // Blocks
 
@@ -35,3 +37,6 @@
 @import "./blocks/stock.scss";
 @import "./blocks/stock-main-card.scss";
 @import "./blocks/stock-card.scss";
+@import "./blocks/faq.scss";
+@import "./blocks/category-list.scss";
+@import "./blocks/questions-list.scss";
