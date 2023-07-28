@@ -4,6 +4,7 @@ import { findVideo } from './modules/form-validate/video';
 import { initTabs, tabs } from './init-tabs';
 import { slider } from './modules/slider';
 import { initAccordions, accordions } from './init-accordion';
+import { reviewSlider } from './modules/reviews-slider';
 
 // ---------------------------------
 
@@ -29,6 +30,7 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     findVideo();
     slider();
+    reviewSlider();
   });
 });
 
