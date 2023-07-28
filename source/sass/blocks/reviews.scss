@@ -44,6 +44,9 @@
 
 .reviews__slider {
   width: 560px;
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
 
   @include vp-1365 {
     width: 566px;
