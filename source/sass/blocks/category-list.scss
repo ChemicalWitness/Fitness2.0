@@ -1,7 +1,7 @@
 .category-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 
   @include vp-1365 {
     flex-direction: row;

@@ -16,7 +16,7 @@
 .programm__item {
   width: 360px;
   height: auto;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-bottom: 120px;
 
   display: flex;
@@ -48,7 +48,7 @@
 }
 
 .programm__link {
-  padding: 68px 77px;
+  padding: 65px 77px;
   text-align: center;
 
   @include vp-1365 {
@@ -62,7 +62,7 @@
 
 .programm__link h3 {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 10px;
   padding: 0;
 
   @include font(700, 26px, 30px);
@@ -75,7 +75,7 @@
 
 .programm__link p {
   margin: 0;
-  margin-bottom: 96px;
+  margin-bottom: 65px;
   padding: 0;
 
   @include font(400, 16px, 24px);
@@ -119,7 +119,7 @@
 
 .programm__price-block {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
 }
 
 .programm__price-block span {

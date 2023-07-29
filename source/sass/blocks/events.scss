@@ -23,21 +23,23 @@
 
 .events__game-description {
   background-color: $bannersBg;
+  width: 500px;
   color: $textOnDarkBg;
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-rows: 2fr 90px 157px;
   align-items: center;
 }
 
 .events__game-description h2 {
   max-width: 201px;
   max-height: 158px;
-  margin: 85px 50px 0 78px;
+  margin: 85px 10px 0 90px;
   padding: 0;
 
   font-family: $alumniSans;
   text-transform: uppercase;
+  letter-spacing: 2.46px;
 
   @include font(600, 82px, 78px);
 
@@ -54,11 +56,11 @@
 .events__game-description p {
   grid-column: span 2;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 22px;
   margin-left: 78px;
   line-height: 27px;
   margin-bottom: 40px;
-  align-self: flex-end;
+  align-self: flex-start;
 
   @include vp-1365 {
     font-size: 12px;
@@ -71,7 +73,7 @@
 .events__info {
   display: flex;
   flex-direction: column;
-  margin: 83px 79px 0 0;
+  margin: 76px 110px 0 0;
   gap: 20px 0;
 
   max-height: 158px;
@@ -98,7 +100,7 @@
 
 .events__date-description {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 25px 37px;
   border-top: 1px $borderOnDarkBg solid;
   padding-top: 10px;
 
@@ -109,7 +111,8 @@
 
 .events__date-description p {
   margin: 0;
-  grid-row: span 2;
+  grid-row: 1/span 2;
+  grid-column: 1/1;
   justify-self: start;
   align-self: center;
 
@@ -126,6 +129,27 @@
   font-size: 14px;
   line-height: 16px;
   align-self: flex-end;
+  grid-column: 2/2;
+  grid-row: 1/2;
+
+  @include vp-1365 {
+    height: 12px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+.events__year {
+  grid-column: 2/2;
+  grid-row: 2/3;
+}
+
+.events__year span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  align-self: flex-end;
+
 
   @include vp-1365 {
     height: 12px;

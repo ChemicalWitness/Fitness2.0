@@ -14,7 +14,7 @@
 .about__inner-wrapper {
   margin-left: 163px;
   margin-right: 85px;
-  margin-top: 169px;
+  margin-top: 163px;
   max-width: 355px;
 
   @include vp-1365 {
@@ -36,7 +36,7 @@
 
 .about__inner-wrapper h2 {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   padding: 0;
 
   @include font(600, 48px, 58px);
@@ -61,7 +61,7 @@
 .about__inner-wrapper span {
   display: inline-block;
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 40px;
   padding: 0;
 
   line-height: 27px;
@@ -93,7 +93,7 @@
 }
 
 .about__text--on-desktop {
-  margin-top: 20px;
+  margin-top: 8px;
 
   @include vp-1365 {
     display: none;
@@ -104,7 +104,7 @@
   position: relative;
   margin-top: 120px;
   margin-right: 103px;
-  margin-bottom: 235px;
+  margin-bottom: 200px;
 
   @include vp-1365 {
     margin: 0 auto;
@@ -124,7 +124,7 @@
 .about__video-link {
   position: absolute;
   top: 288px;
-  left: -50px;
+  left: -63px;
 
   @include vp-1365 {
     top: 261px;

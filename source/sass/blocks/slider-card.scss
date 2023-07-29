@@ -8,7 +8,7 @@
   margin: 0;
   padding: 0;
   position: absolute;
-  bottom: 28px;
+  bottom: 20px;
 
   @include font(700, 18px, 27px);
   text-align: center;
@@ -52,7 +52,7 @@
 }
 
 .slider-card__info > h3 {
-  margin: 58px 0 10px 0;
+  margin: 58px 0 0 0;
   font-size: 18px;
   line-height: 21px;
 
@@ -76,7 +76,7 @@
   margin-right: 40px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 15px;
 
   font-size: 14px;
   line-height: 21px;

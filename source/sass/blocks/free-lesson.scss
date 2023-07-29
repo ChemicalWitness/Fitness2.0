@@ -10,7 +10,7 @@
 
 .free-lesson h2 {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   padding: 0;
 
   font-family: $alumniSans;
@@ -34,7 +34,7 @@
 }
 
 .free-lesson__wrapper {
-  padding: 36px 140px 70px 110px;
+  padding: 55px 140px 62px 105px;
 
   @include vp-1365 {
     padding: 70px 163px 70px 133px;
@@ -49,7 +49,7 @@
 .free-lesson__inner-wrapper {
   display: flex;
   gap: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   @include vp-1365 {
     gap: 60px;
@@ -64,6 +64,7 @@
 .free-lesson__button {
   margin: 0;
   width: 100%;
+  max-width: 410px;
   padding: 21px 50px;
   border: 2px $borderOnDarkBg solid;
   color: $textOnDarkBg;

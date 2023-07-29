@@ -22,7 +22,7 @@
 }
 
 .hero__wrapper picture {
-  margin-top: -20px;
+  margin-top: -40px;
 
   @include vp-1365 {
     margin: 0;
@@ -98,7 +98,7 @@
 .hero__inner-wrapper span {
   position: absolute;
   left: 20px;
-  bottom: 205px;
+  bottom: 190px;
   margin: 0;
   text-align: end;
   font-family: $robotoCondensed;
