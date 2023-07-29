@@ -34,7 +34,7 @@
   }
 }
 
-.about__title {
+.about__inner-wrapper h2 {
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
@@ -58,7 +58,8 @@
   }
 }
 
-.about__subtitle {
+.about__inner-wrapper span {
+  display: inline-block;
   margin: 0;
   margin-bottom: 55px;
   padding: 0;
@@ -75,26 +76,27 @@
   }
 }
 
-.about__text {
+
+.about__text p {
   margin: 0;
   padding: 0;
-
-  &--on-desktop {
-    margin-top: 20px;
-  }
 
   @include font(300, 16px, 24px);
 
   @include vp-1365 {
     text-align: center;
-
-    &--on-desktop {
-      display: none;
-    }
   }
 
   @include vp-767 {
     text-align: start;
+  }
+}
+
+.about__text--on-desktop {
+  margin-top: 20px;
+
+  @include vp-1365 {
+    display: none;
   }
 }
 
@@ -250,5 +252,4 @@
   .about__inner-video-button-triangle {
     fill: $mainColorText;
   }
-
 }

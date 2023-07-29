@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.events__title {
+.events__game-description h2 {
   max-width: 201px;
   max-height: 158px;
   margin: 85px 50px 0 78px;
@@ -48,6 +48,23 @@
 
     font-size: 48px;
     line-height: 46px;
+  }
+}
+
+.events__game-description p {
+  grid-column: span 2;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 78px;
+  line-height: 27px;
+  margin-bottom: 40px;
+  align-self: flex-end;
+
+  @include vp-1365 {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 10px 60px 0 45px;
+    align-self: flex-start;
   }
 }
 
@@ -114,23 +131,6 @@
     height: 12px;
     font-size: 10px;
     line-height: 15px;
-  }
-}
-
-.events__text {
-  grid-column: span 2;
-  margin: 0;
-  margin-top: 30px;
-  margin-left: 78px;
-  line-height: 27px;
-  margin-bottom: 40px;
-  align-self: flex-end;
-
-  @include vp-1365 {
-    font-size: 12px;
-    line-height: 18px;
-    margin: 10px 60px 0 45px;
-    align-self: flex-start;
   }
 }
 

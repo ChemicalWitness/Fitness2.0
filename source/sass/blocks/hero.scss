@@ -35,10 +35,11 @@
 
 .hero__inner-wrapper {
   position: relative;
-  margin-top: 78px;
+  margin-top: 74px;
   padding-left: 100px;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 
   @include vp-1365 {
     margin: 0;
@@ -47,9 +48,9 @@
   }
 }
 
-.hero__subtitle {
+.hero__inner-wrapper p {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 14px;
   padding: 0;
   padding-right: 50px;
   max-width: 133px;
@@ -73,10 +74,10 @@
   }
 }
 
-.hero__title {
+.hero__inner-wrapper h2 {
   max-width: 300px;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
   padding: 0;
   align-self: flex-end;
   text-align: end;
@@ -94,10 +95,10 @@
   }
 }
 
-.hero__text {
+.hero__inner-wrapper span {
   position: absolute;
   left: 20px;
-  bottom: 190px;
+  bottom: 205px;
   margin: 0;
   text-align: end;
   font-family: $robotoCondensed;
@@ -116,7 +117,9 @@
 
 
 .hero__button {
-  padding: 24px 56px;
+  max-width: 230px;
+  width: 100%;
+  padding: 20px 36px;
   color: $textOnDarkBg;
   border: 4px $borderOnDarkBg solid;
 
