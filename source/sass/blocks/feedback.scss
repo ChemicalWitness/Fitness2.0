@@ -1,0 +1,12 @@
+.feedback {
+  background-color: $mainColorBg;
+}
+
+.feedback__wrapper {
+  width: 100%;
+  display: flex;
+
+  @include vp-1365 {
+    flex-direction: column;
+  }
+}

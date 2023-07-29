@@ -17,8 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  initAccordions()
-  initTabs();
+
 
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
@@ -31,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
     findVideo();
     slider();
     reviewSlider();
+    initAccordions()
+    initTabs();
   });
 });
 
