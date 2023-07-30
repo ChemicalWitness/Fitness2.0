@@ -15,7 +15,7 @@
 
   @include vp-1365 {
     margin: 0;
-    gap: 30px;
+    gap: 10px;
     margin-bottom: 82px;
     justify-content: center;
   }
@@ -26,6 +26,7 @@
 
   @include vp-1365 {
     margin: 0;
+    margin-top: -7px;
   }
 
   @include vp-767 {
@@ -62,7 +63,8 @@
 
   @include vp-1365 {
     padding: 0;
-    margin-bottom: 15px;
+    margin-top: 40px;
+    margin-bottom: 23px;
     font-size: 34px;
     line-height: 41px;
   }
@@ -90,8 +92,9 @@
 
   @include vp-1365 {
     font-size: 72px;
-    line-height: 86px;
+    line-height: 80px;
     stroke-width: 2px;
+    margin-bottom: 30px;
   }
 }
 
@@ -107,7 +110,8 @@
   font-weight: 400;
 
   @include vp-1365 {
-    left: 0;
+    left: -20px;
+    bottom: 150px;
   }
 
   @include vp-767 {

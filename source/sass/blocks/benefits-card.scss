@@ -38,6 +38,7 @@
   justify-self: center;
 
   @include vp-1365 {
+    margin-bottom: 22px;
     position: static;
     grid-column: span 2;
     grid-row: 2/2;
@@ -59,7 +60,7 @@
   line-height: 84px;
 
   @include vp-1365 {
-    margin-top: 28px;
+    margin-top: 25px;
   }
 }
 
@@ -74,7 +75,7 @@
   line-height: 39px;
 
   @include vp-1365 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 22px;
     line-height: 33px;
   }
@@ -86,7 +87,7 @@
   line-height: 24px;
 
   @include vp-1365 {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     max-width: 172px;
   }
 }

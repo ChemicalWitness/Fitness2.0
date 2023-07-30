@@ -11,6 +11,10 @@
   margin-bottom: 5px;
 
   @include font(700, 26px, 32px);
+
+  @include vp-1365 {
+    margin-bottom: 10px;
+  }
 }
 
 .stock-card p {
@@ -19,6 +23,10 @@
 
   font-size: 16px;
   line-height: 22px;
+
+  @include vp-1365 {
+    margin-bottom: 50px;
+  }
 }
 
 .stock-card__link {

@@ -9,8 +9,8 @@
   margin-top: 120px;
 
   @include vp-1365 {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 105px;
+    margin-bottom: 105px;
   }
 
   @include vp-767 {
@@ -29,6 +29,11 @@
   grid-template-columns: 1fr auto;
   grid-template-rows: 2fr 90px 157px;
   align-items: center;
+
+  @include vp-1365 {
+    width: 292px;
+    grid-template-rows: 2fr 60px 90px;
+  }
 }
 
 .events__game-description h2 {
@@ -46,7 +51,7 @@
   @include vp-1365 {
     justify-self: flex-end;
     max-width: 117px;
-    margin: 48px 29px 0 45px;
+    margin: 48px 29px 0 50px;
 
     font-size: 48px;
     line-height: 46px;
@@ -79,8 +84,8 @@
   max-height: 158px;
 
   @include vp-1365 {
-    margin: 48px 45px 0 0;
-    gap: 13px 0;
+    margin: 40px 60px 0 0;
+    gap: 0;
   }
 }
 
@@ -106,6 +111,7 @@
 
   @include vp-1365 {
     padding-top: 5px;
+    grid-template-columns: 20px 30px;
   }
 }
 

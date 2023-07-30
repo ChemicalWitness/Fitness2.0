@@ -1603,7 +1603,7 @@ button,
 }
 @media (max-width: 1365px) {
   .main-header__nav {
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 25px;
   }
 }
@@ -1859,7 +1859,7 @@ button,
 @media (max-width: 1365px) {
   .hero__wrapper {
     margin: 0;
-    gap: 30px;
+    gap: 10px;
     margin-bottom: 82px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1873,6 +1873,7 @@ button,
 @media (max-width: 1365px) {
   .hero__wrapper picture {
     margin: 0;
+    margin-top: -7px;
   }
 }
 @media (max-width: 767px) {
@@ -1922,7 +1923,8 @@ button,
 @media (max-width: 1365px) {
   .hero__inner-wrapper p {
     padding: 0;
-    margin-bottom: 15px;
+    margin-top: 40px;
+    margin-bottom: 23px;
     font-size: 34px;
     line-height: 41px;
   }
@@ -1953,8 +1955,9 @@ button,
 @media (max-width: 1365px) {
   .hero__inner-wrapper h2 {
     font-size: 72px;
-    line-height: 86px;
+    line-height: 80px;
     stroke-width: 2px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1971,7 +1974,8 @@ button,
 }
 @media (max-width: 1365px) {
   .hero__inner-wrapper span {
-    left: 0;
+    left: -20px;
+    bottom: 150px;
   }
 }
 @media (max-width: 767px) {
@@ -2053,7 +2057,7 @@ button,
   .about__inner-wrapper {
     margin: 0 133px;
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2091,7 +2095,7 @@ button,
     font-size: 42px;
     line-height: 50px;
     letter-spacing: 1.26px;
-    margin-bottom: 6px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 767px) {
@@ -2112,7 +2116,7 @@ button,
 }
 @media (max-width: 1365px) {
   .about__inner-wrapper span {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
 }
 @media (max-width: 767px) {
@@ -2158,7 +2162,7 @@ button,
 @media (max-width: 1365px) {
   .about__multi-wrapper {
     margin: 0 auto;
-    margin-bottom: 183px;
+    margin-bottom: 145px;
   }
 }
 @media (max-width: 767px) {
@@ -2324,6 +2328,7 @@ button,
 @media (max-width: 1365px) {
   .subscriptions__wrapper h2 {
     padding-top: 100px;
+    padding-bottom: 20px;
     font-size: 42px;
     line-height: 50px;
     letter-spacing: 1.26px;
@@ -2355,7 +2360,7 @@ button,
 }
 @media (max-width: 1365px) {
   .subscriptions__image {
-    bottom: -125px;
+    bottom: -130px;
     right: -120px;
   }
 }
@@ -2465,6 +2470,7 @@ button,
 }
 @media (max-width: 1365px) {
   .programm {
+    gap: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2498,9 +2504,12 @@ button,
 }
 @media (max-width: 1365px) {
   .programm__item {
+    margin-top: 0;
     width: 442px;
-    margin-top: 45px;
     margin-bottom: 40px;
+  }
+  .programm__item:first-child {
+    margin-top: 40px;
   }
   .programm__item:last-child {
     margin-bottom: 100px;
@@ -2524,6 +2533,7 @@ button,
 @media (max-width: 1365px) {
   .programm__link {
     padding: 68px 118px;
+    padding-bottom: 60px;
   }
 }
 @media (max-width: 767px) {
@@ -2674,8 +2684,8 @@ button,
 }
 @media (max-width: 1365px) {
   .events__wrapper {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 105px;
+    margin-bottom: 105px;
   }
 }
 @media (max-width: 767px) {
@@ -2706,6 +2716,13 @@ button,
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 1365px) {
+  .events__game-description {
+    width: 292px;
+    -ms-grid-rows: 2fr 60px 90px;
+    grid-template-rows: 2fr 60px 90px;
+  }
+}
 
 .events__game-description h2 {
   max-width: 201px;
@@ -2723,7 +2740,7 @@ button,
   .events__game-description h2 {
     justify-self: flex-end;
     max-width: 117px;
-    margin: 48px 29px 0 45px;
+    margin: 48px 29px 0 50px;
     font-size: 48px;
     line-height: 46px;
   }
@@ -2763,8 +2780,8 @@ button,
 }
 @media (max-width: 1365px) {
   .events__info {
-    margin: 48px 45px 0 0;
-    gap: 13px 0;
+    margin: 40px 60px 0 0;
+    gap: 0;
   }
 }
 
@@ -2794,6 +2811,8 @@ button,
 @media (max-width: 1365px) {
   .events__date-description {
     padding-top: 5px;
+    -ms-grid-columns: 20px 30px;
+    grid-template-columns: 20px 30px;
   }
 }
 
@@ -2942,6 +2961,13 @@ button,
   -ms-flex-item-align: start;
       align-self: flex-start;
 }
+@media (max-width: 1365px) {
+  .slider__title {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
 
 .slider__title h2 {
   max-width: 1920px;
@@ -2956,7 +2982,7 @@ button,
 }
 @media (max-width: 1365px) {
   .slider__title h2 {
-    margin-bottom: 31px;
+    margin-bottom: 28px;
     padding: 0 45px;
     text-align: center;
     font-size: 42px;
@@ -3002,6 +3028,11 @@ button,
   top: 45%;
   left: 20px;
 }
+@media (max-width: 1365px) {
+  .slider__control--prev {
+    top: 42%;
+  }
+}
 @media (max-width: 767px) {
   .slider__control--prev {
     left: 0;
@@ -3015,6 +3046,11 @@ button,
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+@media (max-width: 1365px) {
+  .slider__control--next {
+    top: 42%;
+  }
 }
 @media (max-width: 767px) {
   .slider__control--next {
@@ -3170,7 +3206,7 @@ button,
   .benefits__wrapper {
     padding: 0 45px;
     padding-top: 91px;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
   }
 }
 @media (max-width: 767px) {
@@ -3194,7 +3230,7 @@ button,
 }
 @media (max-width: 1365px) {
   .benefits__wrapper h2 {
-    margin-bottom: 55px;
+    margin-bottom: 45px;
     font-size: 42px;
     line-height: 50px;
     letter-spacing: 1.26px;
@@ -3227,7 +3263,8 @@ button,
   .benefits__list {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 15px 40px;
+    padding: 0;
   }
 }
 @media (max-width: 767px) {
@@ -3252,6 +3289,11 @@ button,
   display: flex;
   gap: 30px;
   padding-bottom: 50px;
+}
+@media (max-width: 1365px) {
+  .benefits__item {
+    padding-bottom: 20px;
+  }
 }
 @media (max-width: 767px) {
   .benefits__item {
@@ -3321,6 +3363,7 @@ button,
 }
 @media (max-width: 1365px) {
   .benefits-card--main {
+    margin-bottom: 22px;
     position: static;
     -ms-grid-column-span: 2;
     grid-column: span 2;
@@ -3349,7 +3392,7 @@ button,
 }
 @media (max-width: 1365px) {
   .benefits-card--main > .benefits-card__number p {
-    margin-top: 28px;
+    margin-top: 25px;
   }
 }
 
@@ -3364,7 +3407,7 @@ button,
 }
 @media (max-width: 1365px) {
   .benefits-card--main > .benefits-card__description h3 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 22px;
     line-height: 33px;
   }
@@ -3377,7 +3420,7 @@ button,
 }
 @media (max-width: 1365px) {
   .benefits-card--main > .benefits-card__description p {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     max-width: 172px;
   }
 }
@@ -3455,7 +3498,7 @@ button,
 @media (max-width: 1365px) {
   .stock__wrapper {
     margin-top: 91px;
-    margin-bottom: 100px;
+    margin-bottom: 110px;
   }
 }
 @media (max-width: 767px) {
@@ -3507,6 +3550,7 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 30px;
   }
 }
 @media (max-width: 767px) {
@@ -3665,12 +3709,22 @@ button,
   font-size: 26px;
   line-height: 32px;
 }
+@media (max-width: 1365px) {
+  .stock-card h3 {
+    margin-bottom: 10px;
+  }
+}
 
 .stock-card p {
   margin: 0;
   margin-bottom: 75px;
   font-size: 16px;
   line-height: 22px;
+}
+@media (max-width: 1365px) {
+  .stock-card p {
+    margin-bottom: 50px;
+  }
 }
 
 .stock-card__link {
@@ -3699,7 +3753,8 @@ button,
 }
 @media (max-width: 1365px) {
   .faq__wrapper {
-    padding: 100px 0;
+    padding: 95px 0;
+    padding-bottom: 80px;
   }
 }
 @media (max-width: 767px) {
@@ -3871,6 +3926,11 @@ button,
   font-size: 24px;
   line-height: 28px;
 }
+@media (max-width: 1365px) {
+  .questions-list__item h3 {
+    max-width: 550px;
+  }
+}
 @media (max-width: 767px) {
   .questions-list__item h3 {
     width: 238px;
@@ -3961,7 +4021,7 @@ button,
 }
 @media (max-width: 1365px) {
   .reviews__wrapper {
-    padding: 91px 45px 100px 45px;
+    padding: 95px 45px 100px 45px;
   }
 }
 @media (max-width: 767px) {
@@ -4031,6 +4091,14 @@ button,
   display: flex;
   background-color: #102654;
   color: #ffffff;
+}
+@media (max-width: 1365px) {
+  .reviews__slider-slide {
+    padding-top: 55px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+    padding-right: 70px;
+  }
 }
 @media (max-width: 767px) {
   .reviews__slider-slide {
@@ -4104,6 +4172,12 @@ button,
   top: 54%;
   left: 320px;
 }
+@media (max-width: 1365px) {
+  .reviews__control--prev {
+    top: 52%;
+    left: 20px;
+  }
+}
 @media (max-width: 767px) {
   .reviews__control--prev {
     left: 0;
@@ -4117,6 +4191,12 @@ button,
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+@media (max-width: 1365px) {
+  .reviews__control--next {
+    top: 52%;
+    right: 20px;
+  }
 }
 @media (max-width: 767px) {
   .reviews__control--next {
@@ -4379,7 +4459,7 @@ button,
 }
 @media (max-width: 1365px) {
   .free-lesson h2 {
-    margin-bottom: 30px;
+    margin-bottom: 27px;
     font-size: 42px;
     line-height: 50px;
     letter-spacing: 1.26px;
@@ -4395,11 +4475,11 @@ button,
 }
 
 .free-lesson__wrapper {
-  padding: 55px 140px 62px 105px;
+  padding: 55px 140px 65px 105px;
 }
 @media (max-width: 1365px) {
   .free-lesson__wrapper {
-    padding: 70px 163px 70px 133px;
+    padding: 60px 163px 70px 133px;
   }
 }
 @media (max-width: 767px) {
@@ -4438,6 +4518,11 @@ button,
   border: 2px #ffffff solid;
   color: #ffffff;
   cursor: pointer;
+}
+@media (max-width: 1365px) {
+  .free-lesson__button {
+    max-width: none;
+  }
 }
 
 .free-lesson__button:hover:not(:disabled),
@@ -4478,7 +4563,7 @@ button,
 }
 @media (max-width: 1365px) {
   .contacts__wrapper {
-    padding: 70px 163px 70px 133px;
+    padding: 55px 163px 65px 133px;
     border: none;
   }
 }
@@ -4499,6 +4584,7 @@ button,
 }
 @media (max-width: 1365px) {
   .contacts__wrapper h2 {
+    margin-bottom: 35px;
     font-size: 42px;
     line-height: 50px;
     letter-spacing: 1.26px;
@@ -4554,6 +4640,10 @@ button,
   .contacts__second-part-wrapper {
     padding: 0;
   }
+}
+
+.contacts__second-part-wrapper > .contacts__item:first-child {
+  margin-bottom: 25px;
 }
 
 .contacts__item:not(:nth-child(even)) {
