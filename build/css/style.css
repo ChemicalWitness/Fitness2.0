@@ -3192,6 +3192,7 @@ button,
 }
 @media (max-width: 767px) {
   .slider-card__info-list {
+    gap: 3px;
     margin-left: 50px;
     margin-right: 45px;
   }
