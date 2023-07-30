@@ -53,19 +53,39 @@
 }
 
 .stock-main-card__link {
-  max-width: 80px;
+  max-width: 90px;
   display: block;
   color: inherit;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.7px;
+  text-align: center;
 
   border-bottom: 1px $borderOnDarkBg solid;
 
   @include vp-767 {
     margin: 0 auto;
   }
+}
+
+.stock-main-card__link:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.stock-main-card__link:focus-visible:not(:disabled) {
+  padding: 5px;
+  border: 1px $borderOnDarkBg solid;
+  outline: none;
+}
+
+.stock-main-card__link:active:not(:disabled) {
+  opacity: 1;
+}
+
+.stock-main-card__link--disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .stock-main-card__image {
