@@ -4243,7 +4243,7 @@ button,
 
 .reviews__control--prev {
   top: 54%;
-  left: 320px;
+  left: 22%;
 }
 @media (max-width: 1199px) {
   .reviews__control--prev {
@@ -4260,7 +4260,7 @@ button,
 .reviews__control--next {
   position: absolute;
   top: 54%;
-  right: 320px;
+  right: 22%;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
