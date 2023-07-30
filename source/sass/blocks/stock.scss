@@ -13,7 +13,7 @@
 
   @include vp-767 {
     margin-top: 63px;
-    margin-bottom: 70px;
+    margin-bottom: 75px;
   }
 }
 
@@ -54,7 +54,7 @@
   }
 
   @include vp-767 {
-    gap: 30px;
+    gap: 25px;
   }
 }
 
@@ -82,5 +82,7 @@
   @include vp-767 {
     width: 100%;
     text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }

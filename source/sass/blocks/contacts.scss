@@ -20,6 +20,8 @@
 
   @include vp-767 {
     padding: 70px 15px;
+    padding-top: 65px;
+    padding-bottom: 60px;
   }
 }
 
@@ -29,7 +31,7 @@
 
   font-family: $alumniSans;
 
-  @include font(800, 54px, 65px);
+  @include font(600, 54px, 65px);
   letter-spacing: 1.62px;
 
   @include vp-1365 {
@@ -88,13 +90,13 @@
   margin-bottom: 15px;
 
   @include vp-767 {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
   }
 }
 
 .contacts__item:nth-child(even) {
   @include vp-767 {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
 }
 

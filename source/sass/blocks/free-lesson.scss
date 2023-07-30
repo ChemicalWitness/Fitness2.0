@@ -26,7 +26,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 32px;
     line-height: 38px;
     letter-spacing: 0.96px;
@@ -57,7 +57,7 @@
 
   @include vp-767 {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
   }
 }
 

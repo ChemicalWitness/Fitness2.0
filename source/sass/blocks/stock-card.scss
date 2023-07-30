@@ -27,6 +27,10 @@
   @include vp-1365 {
     margin-bottom: 50px;
   }
+
+  @include vp-767 {
+    margin-bottom: 35px;
+  }
 }
 
 .stock-card__link {

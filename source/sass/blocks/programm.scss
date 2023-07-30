@@ -42,11 +42,14 @@
 
   @include vp-767 {
     width: 290px;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 48px;
+
+    &:first-child {
+      margin-top: 35px;
+    }
 
     &:last-child {
-      margin-bottom: 70px;
+      margin-bottom: 90px;
     }
   }
 }
@@ -61,7 +64,8 @@
   }
 
   @include vp-767 {
-    padding: 55px 42px;
+    padding: 50px 42px;
+    padding-bottom: 40px;
   }
 }
 
@@ -84,6 +88,10 @@
   padding: 0;
 
   @include font(400, 16px, 24px);
+
+  @include vp-767 {
+    margin-bottom: 50px;
+  }
 }
 
 .programm__link:hover,

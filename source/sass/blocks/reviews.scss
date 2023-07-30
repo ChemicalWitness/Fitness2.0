@@ -76,8 +76,9 @@
   }
 
   @include vp-767 {
-    padding: 40px;
+    padding: 20px;
     display: block;
+    padding-top: 50px;
   }
 }
 
@@ -86,7 +87,8 @@
 
   @include vp-767 {
     position: absolute;
-    top: 30px;
+    left: 40px;
+    top: 40px;
   }
 }
 
@@ -97,8 +99,8 @@
   @include font(700, 20px, 30px);
 
   @include vp-767 {
-    margin-bottom: 34px;
-    padding-left: 75px;
+    margin-bottom: 20px;
+    padding-left: 100px;
     line-height: 26px;
   }
 }
