@@ -4068,7 +4068,7 @@ button,
 }
 @media (max-width: 767px) {
   .questions-list__button {
-    top: 36px;
+    top: 25%;
   }
 }
 
