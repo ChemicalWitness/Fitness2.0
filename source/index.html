@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="fonts/AlumniSans-Bold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/AlumniSans-ExtraBold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/rouble.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/AlumniSans-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/AlumniSans-ExtraBold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/RobotoCondensed-Light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/rouble.woff2" as="font" crossorigin="anonymous">
     <meta name="description" content="Тренажёрный зал Supergym">
     <title>Фитнес 2.0</title>
     <link rel="stylesheet" href="./css/style.min.css">
@@ -39,8 +39,12 @@
               <div class="hero__inner-wrapper">
                 <p>Омск</p>
                 <h2>Фитнес центр</h2>
-                <span>Тренажёрный зал <br> Групповые занятия <br> Кардио-зона </span>
-                <button class="hero__button btn" type="button">Купить абонемент</button>
+                <ul class="hero__info-list">
+                  <li>Тренажёрный зал</li>
+                  <li>Групповые занятия</li>
+                  <li>Кардио-зона</li>
+                </ul>
+                <a class="hero__button btn" href="#subscriptions">Купить абонемент</a>
               </div>
               <picture>
                 <source type="image/webp" media="(max-width:1199px)" srcset="./img/hero-image-tablet.webp 1x, ./img/hero-image-tablet@2x.webp 2x" width="324" height="390">
@@ -59,11 +63,9 @@
             <div class="about__inner-wrapper">
               <h2>Тренажерный зал</h2>
               <span>Просторный зал площадью 900 кв/м</span>
-              <div class="about__text">
+              <div class="about__text-wrapper">
                 <p>Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-              </div>
 
-              <div class="about__text about__text--on-desktop">
                 <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
               </div>
 
@@ -78,7 +80,13 @@
                 <img src="./img/gym-image-desktop.png" srcset="./img/gym-image-desktop@2x.png 2x" width="660" height="401" alt="Изображение тренажерного зала">
               </picture>
               <div class="about__video">
-                <a class="about__video-link" href="https://www.youtube.com/watch?v=9TZXsZItgdw&ab_channel=HTMLAcademy">
+                <!-- <a class="about__video-link" href="#"> -->
+                  <a class="about__video-button" href="https://www.youtube.com/embed/9TZXsZItgdw">
+                    <svg width="17" height="17">
+                      <use href="./img/sprite.svg#play"></use>
+                    </svg>
+                    <span class="visually-hidden">Показать видео ролик</span>
+                  </a>
                   <picture>
                     <source type="image/webp" media="(max-width:767px)" srcset="./img/gym-video-mobile.webp 1x, ./img/gym-video-mobile@2x.webp 2x" width="320" height="167">
                     <source type="image/webp" media="(max-width:1199px)" srcset="./img/gym-video-tablet.webp 1x, ./img/gym-video-tablet@2x.webp 2x" width="266" height="167">
@@ -87,69 +95,15 @@
                     <source media="(max-width:1199px)" srcset="./img/gym-video-tablet.png 1x, ./img/gym-video-tablet@2x.png 2x" width="266" height="167">
                     <img src="./img/gym-video-desktop.png" srcset="./img/gym-video-desktop@2x.png 2x" width="364" height="228" alt="Видео о тренажерном зале">
                   </picture>
-                </a>
-                <button class="about__video-button" aria-label="Запустить видео">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="100"
-                    height="100"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                  >
-                    <circle
-                      class="about__inner-video-button-big-circle"
-                      cx="50"
-                      cy="50"
-                      r="49"
-                      stroke="url(#paint0_linear_1_293)"
-                      stroke-opacity="0.2"
-                      stroke-width="2"
-                    />
-                    <circle
-                      class="about__inner-video-button-small-circle"
-                      cx="50"
-                      cy="50"
-                      r="36"
-                      fill="url(#paint1_linear_1_293)"
-                    />
+                  <div class="about__video-player" id="player"></div>
+                <!-- </a> -->
 
-                    <path
-                      class="about__inner-video-button-triangle"
-                      d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z"
-                      fill="white"
-                    />
-                    <defs>
-                      <linearGradient
-                        id="paint0_linear_1_293"
-                        x1="19.774"
-                        y1="3.00672e-05"
-                        x2="105.785"
-                        y2="10.6444"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0" stop-color="#ED0233"/>
-                        <stop offset="1" stop-color="#003EB7"/>
-                      </linearGradient>
-                      <linearGradient
-                        id="paint1_linear_1_293"
-                        x1="14"
-                        y1="49.52"
-                        x2="54.1858"
-                        y2="9.18415"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0" stop-color="#003D85"/>
-                        <stop offset="0.885417" stop-color="#B80027"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </button>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="subscriptions">
+        <section class="subscriptions" id="subscriptions">
           <div class="container">
             <div class="subscriptions__wrapper">
               <h2>Абонементы</h2>
@@ -174,191 +128,163 @@
                 <div class="subscriptions__tabs-content" data-tabs="content">
                   <ol class="programm programm--active" data-tabs="element">
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>С тренером</h3>
                         <p>12 занятий</p>
                         <div class="programm__price-block">
-                          <span>5000</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>5000</span>
-                          </div>
-
+                          <p>5000</p>
                           <svg width="30" height="42">
                             <use href="./img/sprite.svg#rouble"></use>
                           </svg>
+                          <span>5000</span>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>Дневной</h3>
                         <p>с 8:00 до 17:00</p>
                         <div class="programm__price-block">
+                          <p>1700</p>
+                          <svg width="30" height="42">
+                            <use href="./img/sprite.svg#rouble"></use>
+                          </svg>
                           <span>1700</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>1700</span>
-                          </div>
-                          <svg width="30" height="42">
-                            <use href="./img/sprite.svg#rouble"></use>
-                          </svg>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>Полный день</h3>
                         <p>с 8:00 до 22:00</p>
                         <div class="programm__price-block">
+                          <p>2700</p>
+                          <svg width="30" height="42">
+                            <use href="./img/sprite.svg#rouble"></use>
+                          </svg>
                           <span>2700</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>2700</span>
-                          </div>
-                          <svg width="30" height="42">
-                            <use href="./img/sprite.svg#rouble"></use>
-                          </svg>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
                   </ol>
 
                   <ol class="programm" data-tabs="element">
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>С тренером</h3>
                         <p>12 занятий</p>
                         <div class="programm__price-block">
+                          <p>10000</p>
+                          <svg width="30" height="42">
+                            <use href="./img/sprite.svg#rouble"></use>
+                          </svg>
                           <span>10000</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>10000</span>
-                          </div>
-                          <svg width="30" height="42">
-                            <use href="./img/sprite.svg#rouble"></use>
-                          </svg>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>Дневной</h3>
                         <p>с 8:00 до 17:00</p>
                         <div class="programm__price-block">
-                          <span>3000</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>3000</span>
-                          </div>
+                          <p>3000</p>
                           <svg width="30" height="42">
                             <use href="./img/sprite.svg#rouble"></use>
                           </svg>
+                          <span>3000</span>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>Полный день</h3>
                         <p>с 8:00 до 22:00</p>
                         <div class="programm__price-block">
-                          <span>5000</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>5000</span>
-                          </div>
+                          <p>5000</p>
                           <svg width="30" height="42">
                             <use href="./img/sprite.svg#rouble"></use>
                           </svg>
+                          <span>5000</span>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
                   </ol>
 
                   <ol class="programm" data-tabs="element">
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>С тренером</h3>
                         <p>12 занятий</p>
                         <div class="programm__price-block">
-                          <span>15000</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>15000</span>
-                          </div>
+                          <p>15000</p>
                           <svg width="30" height="42">
                             <use href="./img/sprite.svg#rouble"></use>
                           </svg>
+                          <span>15000</span>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>Дневной</h3>
                         <p>с 8:00 до 17:00</p>
                         <div class="programm__price-block">
-                          <span>5000</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>5000</span>
-                          </div>
+                          <p>5000</p>
                           <svg width="30" height="42">
                             <use href="./img/sprite.svg#rouble"></use>
                           </svg>
+                          <span>5000</span>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
 
                     <li class="programm__item">
-                      <a class="programm__link" href="#">
+                      <div class="programm__link">
                         <h3>Полный день</h3>
                         <p>с 8:00 до 22:00</p>
                         <div class="programm__price-block">
-                          <span>8000</span>
-                          <div class="programm__price programm__price--bg">
-                            <span>8000</span>
-                          </div>
+                          <p>8000</p>
                           <svg width="30" height="42">
                             <use href="./img/sprite.svg#rouble"></use>
                           </svg>
+                          <span>8000</span>
                         </div>
-                        <div class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
-                        </div>
-                      </a>
+                        </a>
+                      </div>
                     </li>
                   </ol>
                 </div>
-              </div>
-
-              <div class="subscriptions__image">
-                <picture>
-                  <source type="image/webp" media="(max-width:1199px)" srcset="./img/decorative-image-tablet.webp 1x, ./img/decorative-image-tablet@2x.webp 2x" width="422">
-                  <source type="image/webp" srcset="./img/decorative-image-desktop.webp 1x, ./img/decorative-image-desktop@2x.webp 2x" width="470" height="494">
-                  <source media="(max-width:1199px)" srcset="./img/decorative-image-tablet.png 1x, ./img/decorative-image-tablet@2x.png 2x" width="422">
-                  <img src="./img/decorative-image-desktop.png" srcset="./img/decorative-image-desktop@2x.png 2x" width="470" height="494" alt="">
-                </picture>
               </div>
             </div>
           </div>
@@ -375,9 +301,7 @@
                     <div class="events__date-description">
                       <p>7</p>
                       <span>Марта</span>
-                      <div class="events__year">
-                        <span>2019</span>
-                      </div>
+                      <span>2019</span>
                     </div>
                   </div>
                   <div class="events__date">
@@ -422,9 +346,9 @@
                   <h3>Анна Павлова</h3>
                   <span>CrossFit</span>
                   <ul class="slider-card__info-list">
-                    <li class="slider-card__info-list__item">Certified Level 3 Trainer</li>
-                    <li class="slider-card__info-list__item">Победитель чемпионата России по CrossFit</li>
-                    <li class="slider-card__info-list__item">Опыт — 6 лет</li>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
                   </ul>
                 </div>
               </div>
@@ -441,9 +365,9 @@
                   <h3>Алексей Лавров</h3>
                   <span>CrossFit</span>
                   <ul class="slider-card__info-list">
-                    <li class="slider-card__info-list__item">Certified Level 3 Trainer</li>
-                    <li class="slider-card__info-list__item">Победитель чемпионата России по CrossFit</li>
-                    <li class="slider-card__info-list__item">Опыт — 6 лет</li>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
                   </ul>
                 </div>
               </div>
@@ -460,9 +384,9 @@
                   <h3>Александр Пашков</h3>
                   <span>CrossFit</span>
                   <ul class="slider-card__info-list">
-                    <li class="slider-card__info-list__item">Certified Level 3 Trainer</li>
-                    <li class="slider-card__info-list__item">Победитель чемпионата России по CrossFit</li>
-                    <li class="slider-card__info-list__item">Опыт — 6 лет</li>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
                   </ul>
                 </div>
               </div>
@@ -479,9 +403,9 @@
                   <h3>Мария Кетова</h3>
                   <span>CrossFit</span>
                   <ul class="slider-card__info-list">
-                    <li class="slider-card__info-list__item">Certified Level 3 Trainer</li>
-                    <li class="slider-card__info-list__item">Победитель чемпионата России по CrossFit</li>
-                    <li class="slider-card__info-list__item">Опыт — 6 лет</li>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
                   </ul>
                 </div>
               </div>
@@ -498,9 +422,9 @@
                   <h3>Екатерина Смелая</h3>
                   <span>CrossFit</span>
                   <ul class="slider-card__info-list">
-                    <li class="slider-card__info-list__item">Certified Level 3 Trainer</li>
-                    <li class="slider-card__info-list__item">Победитель чемпионата России по CrossFit</li>
-                    <li class="slider-card__info-list__item">Опыт — 6 лет</li>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
                   </ul>
                 </div>
               </div>
@@ -517,9 +441,9 @@
                   <h3>Олег Кононенко</h3>
                   <span>CrossFit</span>
                   <ul class="slider-card__info-list">
-                    <li class="slider-card__info-list__item">Certified Level 3 Trainer</li>
-                    <li class="slider-card__info-list__item">Победитель чемпионата России по CrossFit</li>
-                    <li class="slider-card__info-list__item">Опыт — 6 лет</li>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
                   </ul>
                 </div>
               </div>
@@ -536,9 +460,9 @@
                   <h3>Виталий Зарубов</h3>
                   <span>CrossFit</span>
                   <ul class="slider-card__info-list">
-                    <li class="slider-card__info-list__item">Certified Level 3 Trainer</li>
-                    <li class="slider-card__info-list__item">Победитель чемпионата России по CrossFit</li>
-                    <li class="slider-card__info-list__item">Опыт — 6 лет</li>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
                   </ul>
                 </div>
               </div>
@@ -555,24 +479,22 @@
                   <h3>Олеся Гордиенко</h3>
                   <span>CrossFit</span>
                   <ul class="slider-card__info-list">
-                    <li class="slider-card__info-list__item">Certified Level 3 Trainer</li>
-                    <li class="slider-card__info-list__item">Победитель чемпионата России по CrossFit</li>
-                    <li class="slider-card__info-list__item">Опыт — 6 лет</li>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
           <button class="slider__control slider__control--prev" type="button" aria-label="На предыдущий слайд">
-            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="29" cy="29" r="28" fill="none" stroke="none"/>
-              <path d="M35 13L19 29L35 45" stroke="#102654"/>
+            <svg width="16" height="32">
+              <use href="./img/sprite.svg#arrow"></use>
             </svg>
           </button>
           <button class="slider__control slider__control--next" type="button" aria-label="На следующий слайд">
-            <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="29" cy="29" r="28" fill="none" stroke="none"/>
-              <path d="M35 13L19 29L35 45" stroke="#102654"/>
+            <svg width="16" height="32">
+              <use href="./img/sprite.svg#arrow"></use>
             </svg>
           </button>
         </section>
@@ -581,9 +503,18 @@
           <div class="benefits__wrapper">
             <h2>Наши преимущества</h2>
             <ul class="benefits__list">
+              <li class="benefits__item benefits-card benefits-card--main">
+                <div class="benefits-card__number">
+                  <span>100</span>
+                  <h3>Тренажеров</h3>
+                </div>
+                <div class="benefits-card__description">
+                  <p>Современные тренажеры на все группы мышц</p>
+                </div>
+              </li>
               <li class="benefits__item benefits-card">
                 <div class="benefits-card__number">
-                  <p>900</p>
+                  <span>900</span>
                   <span>кв/м</span>
                 </div>
                 <div class="benefits-card__description">
@@ -591,9 +522,9 @@
                   <p>Занимайтесь без очередей и толкучки</p>
                 </div>
               </li>
-              <li class="benefits__item benefits-card benefits-card--order-2">
+              <li class="benefits__item benefits-card">
                 <div class="benefits-card__number">
-                  <p>70</p>
+                  <span>70</span>
                   <span>машин</span>
                 </div>
                 <div class="benefits-card__description">
@@ -605,7 +536,7 @@
 
               <li class="benefits__item benefits-card">
                 <div class="benefits-card__number">
-                  <p>350</p>
+                  <span>350</span>
                   <span>мест</span>
                 </div>
                 <div class="benefits-card__description">
@@ -615,7 +546,7 @@
               </li>
               <li class="benefits__item benefits-card">
                 <div class="benefits-card__number">
-                  <p>5+</p>
+                  <span>5+</span>
                   <span>лет</span>
                 </div>
                 <div class="benefits-card__description">
@@ -623,15 +554,7 @@
                   <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
                 </div>
               </li>
-              <li class="benefits__item benefits-card benefits-card--main">
-                <div class="benefits-card__number">
-                  <p>100</p>
-                </div>
-                <div class="benefits-card__description">
-                  <h3>Тренажеров</h3>
-                  <p>Современные тренажеры на все группы мышц</p>
-                </div>
-              </li>
+
             </ul>
           </div>
         </section>
@@ -703,61 +626,25 @@
                   <div class="faq__questions questions-list questions-list--active" data-tabs="element" data-accordion="parent">
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Как стать членом фитнес-центра?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Где можно посмотреть расписание?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Есть кулеры в центре? Предоставляются полотенца?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Сколько тренеров работает в клубе и какова их квалификация?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">При первом посещении и покупке абонемента, необходимо заполнить анкету и подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет вам на почту.</p>
                     </div>
                   </div>
@@ -765,61 +652,25 @@
                   <div class="faq__questions questions-list" data-tabs="element" data-accordion="parent">
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Занятия с тренером входят в абонемент?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Можно ли заморозить абонемент?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Есть ли лимит по посещениям тренажерного зала и групповых занятий?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Что такое семейный доступ и доступ для друзей?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">При посещении тренажерного зала вам необходимо оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно задать вопрос,  получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
                     </div>
                   </div>
@@ -827,61 +678,25 @@
                   <div class="faq__questions questions-list" data-tabs="element" data-accordion="parent">
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Предлагает ли клуб услуги по консультированию по вопросам питания?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Проводятся ли в клубе какие-либо мероприятия или соревнования?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Можно ли приобрести в центре спортивное питание?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Есть ли в центре детская комната?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">Да. Вы можете обратиться как к своему тренеру, так и к нашему нутрициологу. Специалист уточнит ваши данные, цели и предложит программу питания.</p>
                     </div>
                   </div>
@@ -889,61 +704,25 @@
                   <div class="faq__questions questions-list" data-tabs="element" data-accordion="parent">
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Есть в фитнес-центре дресс-код?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Можно ли приводить с собой детей на тренировки?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Какие дополнительные правила посещения центра?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
                     </div>
 
                     <div class="questions-list__item" data-accordion="element">
                       <h3>Нужна ли медицинская справка для посещения залов и бассейна?</h3>
-                      <button class="questions-list__button" data-accordion="button" type="button">
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M21 12V21M21 30V21M21 21H30M21 21H12" stroke="#102654"/>
-                        </svg>
-                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="21" cy="21" r="20.5" fill="none" stroke="#1C3374"/>
-                          <path d="M30 21H21H12" stroke="#102654"/>
-                        </svg>
-                      </button>
+                      <button class="questions-list__button" data-accordion="button" type="button"></button>
                       <p data-accordion="content">Для тренировок необходимо иметь предназначенную для этого закрытую спортивную обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки, спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога, пилатес).</p>
                     </div>
                   </div>
@@ -985,15 +764,13 @@
               </div>
             </div>
             <button class="reviews__control reviews__control--prev" type="button" aria-label="На предыдущий слайд">
-              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="29" cy="29" r="28" fill="none" stroke="none"/>
-                <path d="M35 13L19 29L35 45" stroke="#102654"/>
+              <svg width="16" height="32">
+                <use href="./img/sprite.svg#arrow"></use>
               </svg>
             </button>
             <button class="reviews__control reviews__control--next" type="button" aria-label="На следующий слайд">
-              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="29" cy="29" r="28" fill="none" stroke="none"/>
-                <path d="M35 13L19 29L35 45" stroke="#102654"/>
+              <svg width="16" height="32">
+                <use href="./img/sprite.svg#arrow"></use>
               </svg>
             </button>
           </div>
@@ -1009,12 +786,12 @@
                     <div class="free-lesson__inner-wrapper">
                       <div class="custom-input" data-validate-type="text" data-limitation="name" data-message-base="Обязательное поле" data-message-extra="Проверьте правильность заполнения поля" data-required="data-required">
                         <label>
-                          <input type="text" name="username" placeholder="Имя" aria-label="поле ввода имени">
+                          <input type="text" name="username" placeholder="Имя" aria-label="поле ввода имени" required>
                         </label>
                       </div>
                       <div class="custom-input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-message-base="Обязательное поле" data-message-extra="Проверьте правильность заполнения поля" data-required="data-required">
                         <label>
-                          <input type="tel" name="phone" placeholder="Телефон" aria-label="поле ввода телефона">
+                          <input type="tel" name="phone" placeholder="Телефон" aria-label="поле ввода телефона" required>
                         </label>
                       </div>
                     </div>

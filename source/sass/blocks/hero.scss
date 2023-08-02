@@ -21,11 +21,11 @@
   }
 
   @include vp-767 {
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
 }
 
-.hero__wrapper picture {
+.hero__wrapper img {
   margin-top: -40px;
 
   @include vp-1365 {
@@ -74,7 +74,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 28px;
     line-height: 34px;
   }
@@ -102,21 +102,23 @@
   }
 
   @include vp-767 {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     letter-spacing: 3.6px;
   }
 }
 
-.hero__inner-wrapper span {
+.hero__info-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
   position: absolute;
   left: 20px;
   bottom: 190px;
-  margin: 0;
-  text-align: end;
   font-family: $robotoCondensed;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  text-align: end;
 
   @include vp-1365 {
     left: -20px;
@@ -124,13 +126,14 @@
   }
 
   @include vp-767 {
-    bottom: 130px;
+    bottom: 110px;
     left: 0;
   }
 }
 
 
 .hero__button {
+  text-align: center;
   max-width: 230px;
   width: 100%;
   padding: 20px 36px;
@@ -145,7 +148,7 @@
   @include vp-767 {
     max-width: 100%;
     width: 100%;
-    padding: 25px 80px;
+    padding: 20px 70px;
   }
 
   &:hover,

@@ -8,8 +8,6 @@
   width: 100%;
   position: relative;
   border-bottom: 1px rgba(28, 51, 116, 0.2) solid;
-
-
 }
 
 .questions-list__item:first-child {
@@ -55,15 +53,58 @@
 .questions-list__button {
   margin: 0;
   padding: 0;
-  border: none;
+  border: 1px #1c3374 solid;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
   background-color: transparent;
   position: absolute;
   right: 0;
   top: 25px;
   cursor: pointer;
 
+  &::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    background-color: #1c3374;
+    top: 50%;
+    left: 25%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    background-color: #1c3374;
+    top: 11px;
+    left: 19px;
+    transform: rotate(180deg);
+  }
+
   @include vp-767 {
     top: 36px;
+  }
+}
+
+.questions-list__button.is-active {
+  &::before {
+    display: none;
+  }
+}
+
+.questions-list__button:hover:not(:disabled),
+.questions-list__button:focus-visible:not(:disabled) {
+  background-color: #1c3374;
+
+  &::after {
+    background-color: $mainColor;
+  }
+
+  &::before {
+    background-color: $mainColor;
   }
 }
 
@@ -72,32 +113,6 @@
     width: 32px;
     height: 32px;
   }
-}
-
-.questions-list__item > .questions-list__button svg:last-child {
-  display: none;
-}
-
-.questions-list__item.is-active > .questions-list__button svg:first-child {
-  display: none;
-}
-
-.questions-list__item.is-active > .questions-list__button svg:last-child {
-  display: block;
-}
-
-.questions-list__item > .questions-list__button:hover:not(:disabled) svg path,
-.questions-list__item > .questions-list__button:focus-visible:not(:disabled) svg path,
-.questions-list__item > .questions-list__button:hover:not(:disabled) svg circle,
-.questions-list__item > .questions-list__button:focus-visible:not(:disabled) svg circle {
-  stroke: $borderOnDarkBg;
-  fill: $additionalAccentText;
-}
-
-.questions-list__item.is-active > .questions-list__button svg:last-child path,
-.questions-list__item.is-active > .questions-list__button svg:last-child circle {
-  stroke: $borderOnDarkBg;
-  fill: $additionalAccentText;
 }
 
 .questions-list__button:disabled {

@@ -42,14 +42,14 @@
 
   @include vp-767 {
     width: 290px;
-    margin-bottom: 48px;
+    margin-bottom: 35px;
 
     &:first-child {
       margin-top: 35px;
     }
 
     &:last-child {
-      margin-bottom: 90px;
+      margin-bottom: 80px;
     }
   }
 }
@@ -65,7 +65,7 @@
 
   @include vp-767 {
     padding: 50px 42px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
   }
 }
 
@@ -84,18 +84,14 @@
 
 .programm__link p {
   margin: 0;
-  margin-bottom: 65px;
   padding: 0;
+  margin-bottom: 10px;
 
   @include font(400, 16px, 24px);
-
-  @include vp-767 {
-    margin-bottom: 50px;
-  }
 }
 
 .programm__link:hover,
-.programm__link:focus-visible {
+.programm__link:focus-within {
   padding-top: 58px;
   padding-bottom: 58px;
   border: 7px solid;
@@ -109,12 +105,13 @@
 
   @include vp-767 {
     padding-top: 43px;
-    padding-bottom: 33px;
+    padding-bottom: 43px;
     padding-left: 35px;
     padding-right: 35px;
   }
 
   .programm__button {
+
     color: $textOnDarkBg;
     background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
     border: 2px solid;
@@ -124,6 +121,7 @@
 }
 
 .programm__link:active > .programm__button span {
+  display: block;
   opacity: 0.7;
 }
 
@@ -135,23 +133,54 @@
 }
 
 .programm__price-block {
+  padding: 54px 0 33px;
   position: relative;
-  margin-bottom: 33px;
+  width: 100%;
+
+  @include vp-767 {
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
 }
 
-.programm__price-block span {
+.programm__price-block p {
+  margin: 0;
   display: inline-block;
-  margin-right: 14px;
+  padding-right: 14px;
 
   @include font(700, 60px, 90px);
   color: $additionalAccentText;
   z-index: 10;
 
   @include vp-767 {
-    margin-right: 10px;
 
     font-size: 48px;
     line-height: 72px;
+  }
+}
+
+.programm__price-block span {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  font-size: 100px;
+  line-height: 120px;
+  color: #e8e8e8;
+  opacity: 0.47;
+  z-index: -1;
+  font-weight: 700;
+
+  @include vp-1365 {
+    bottom: 40px;
+  }
+
+  @include vp-767 {
+    bottom: 25px;
+    font-size: 80px;
   }
 }
 
@@ -159,25 +188,6 @@
   display: inline-block;
 }
 
-.programm__price--bg span {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 100px;
-  line-height: 150px;
-  color: #e8e8e8;
-  opacity: 0.47;
-  z-index: -1;
-
-  @include vp-767 {
-    font-size: 80px;
-    line-height: 120px;
-  }
-}
 
 .programm__price-block svg {
   @include vp-767 {
@@ -187,8 +197,9 @@
 }
 
 .programm__button {
+  display: block;
+  cursor: pointer;
   width: 206px;
-  padding: 25px 37px;
+  padding: 23px 37px;
   border: 2px solid #102654;
 }
-

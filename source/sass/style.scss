@@ -11,12 +11,11 @@
 @import "./global/reboot.scss";
 @import "./global/utils.scss";
 @import "./global/container.scss";
-@import './data-tabs.scss';
-@import "./tabs.scss";
-@import "./data-accordion.scss";
-@import "./accordion.scss";
+@import "./vendor/data-tabs.scss";
+@import "./vendor/data-accordion.scss";
 
 // Blocks
+
 
 @import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";

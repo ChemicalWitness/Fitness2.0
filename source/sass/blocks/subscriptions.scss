@@ -1,5 +1,36 @@
 .subscriptions {
+  position: relative;
   background-color: $additionallyBg;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    background-image: url("../../img/decorative-image-desktop.webp");
+    background-repeat: no-repeat;
+    width: 470px;
+    height: 494px;
+    background-size: 470px 494px;
+    bottom: -18%;
+    right: -14%;
+    z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/decorative-image-desktop@2x.webp");
+    }
+
+    @include vp-1365 {
+      width: 422px;
+      background-size: 422px;
+      bottom: -10%;
+      right: -10%;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 }
 
 .subscriptions__wrapper {
