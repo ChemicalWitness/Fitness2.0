@@ -22,12 +22,14 @@
 }
 
 .stock-main-card__description span {
+  max-width: 189px;
   display: inline-block;
 
   @include font(700, 28px, 43px);
 }
 
 .stock-main-card__description > p {
+  max-width: 189px;
   margin: 0;
   margin-bottom: 30px;
   padding: 0;

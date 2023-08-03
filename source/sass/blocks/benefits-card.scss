@@ -127,6 +127,7 @@
 }
 
 .benefits-card__description h3 {
+  max-width: 230px;
   margin: 22px 0 6px;
 
   font-weight: 700;
@@ -146,6 +147,7 @@
 }
 
 .benefits-card__description p {
+  max-width: 230px;
   margin: 0;
 
   @include font(300, 16px, 22px);
