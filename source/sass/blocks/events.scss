@@ -26,20 +26,23 @@
   width: 500px;
   color: $textOnDarkBg;
   display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-rows: 2fr 90px 157px;
-  align-items: center;
+  grid-template-columns: 182px 1fr;
+  gap: 16px 70px;
+  align-content: start;
+  padding: 83px 77px;
 
   @include vp-1365 {
     width: 292px;
-    grid-template-rows: 2fr 60px 90px;
+    grid-template-columns: 120px 1fr;
+    padding: 51px 45px;
+    gap: 5px 30px;
   }
 }
 
 .events__game-description h2 {
-  max-width: 201px;
-  max-height: 158px;
-  margin: 85px 10px 0 90px;
+  margin-top: 3px;
+  margin-bottom: 0;
+  text-align: center;
   padding: 0;
 
   font-family: $alumniSans;
@@ -49,126 +52,81 @@
   @include font(600, 82px, 78px);
 
   @include vp-1365 {
-    justify-self: flex-end;
-    max-width: 117px;
-    margin: 48px 29px 0 50px;
-
     font-size: 48px;
     line-height: 46px;
   }
 }
 
-.events__game-description p {
-  grid-column: span 2;
+.events__game-description dl {
   margin: 0;
-  margin-top: 22px;
-  margin-left: 78px;
-  line-height: 27px;
-  margin-bottom: 40px;
-  align-self: flex-start;
+}
+
+.events__game-description dt {
+  padding-bottom: 7px;
+
+  font-size: 18px;
+  line-height: 21px;
 
   @include vp-1365 {
+    padding-bottom: 3px;
+
     font-size: 12px;
     line-height: 18px;
-    margin: 10px 60px 0 45px;
-    align-self: flex-start;
   }
 }
 
-.events__info {
-  display: flex;
-  flex-direction: column;
-  margin: 76px 110px 0 0;
-  gap: 20px 0;
-
-  max-height: 158px;
-
-  @include vp-1365 {
-    margin: 40px 60px 0 0;
-    gap: 0;
-  }
-}
-
-.events__date > span {
-  display: block;
-  line-height: 27px;
-  height: 17px;
-  margin-bottom: 13px;
-
-  @include vp-1365 {
-    font-size: 12px;
-    line-height: 18px;
-    height: 9px;
-    margin-bottom: 7px;
-  }
-}
-
-.events__date-description {
-  display: grid;
-  grid-template-columns: 25px 37px;
-  border-top: 1px $borderOnDarkBg solid;
-  padding-top: 10px;
-
-  @include vp-1365 {
-    padding-top: 5px;
-    grid-template-columns: 20px 30px;
-  }
-}
-
-.events__date-description p {
+.events__game-description dd {
+  width: fit-content;
   margin: 0;
-  grid-row: 1/span 2;
-  grid-column: 1/1;
-  justify-self: start;
-  align-self: center;
 
-  @include font(700, 40px, 27px);
+  @include font(700, 40px, 47px);
+
+  border-top: 1px solid $borderOnDarkBg;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include vp-1365 {
+      margin-bottom: 5px;
+    }
+  }
 
   @include vp-1365 {
     font-size: 24px;
-    line-height: 17px;
+    line-height: 27px;
   }
 }
 
-.events__date-description span {
+.events__game-description span {
   display: inline-block;
-  font-size: 14px;
-  line-height: 16px;
-  align-self: flex-end;
-  grid-column: 2/2;
-  grid-row: 1/2;
+  max-width: 37px;
+
+  @include font(400, 14px, 16px);
 
   @include vp-1365 {
-    height: 12px;
     font-size: 10px;
     line-height: 15px;
   }
 }
 
-.events__date-description span:last-child {
-  grid-column: 2/2;
-  grid-row: 2/3;
-}
+.events__game-description p {
+  grid-column: 1/-1;
+  margin: 0;
 
-.events__year span {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 16px;
-  align-self: flex-end;
-
+  @include font(300, 18px, 150%);
 
   @include vp-1365 {
-    height: 12px;
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 
 .events__link {
-  grid-column: span 2;
-  justify-self: center;
-  align-self: flex-start;
-  padding: 29px 113px;
+  grid-column: 1/-1;
+  width: 100%;
+  text-align: center;
+  margin-top: 31px;
+  padding: 24px 20px;
   color: $textOnDarkBg;
   border: 4px $borderOnDarkBg solid;
 
@@ -188,6 +146,7 @@
   }
 
   @include vp-1365 {
+    margin-top: 15px;
     padding: 12px 50px;
     border: 2px $borderOnDarkBg solid;
 

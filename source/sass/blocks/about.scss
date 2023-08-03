@@ -91,7 +91,7 @@
   }
 }
 
-.about__text-wrapper p:last-child {
+.about__text-wrapper p:not(:first-child) {
   margin-top: 8px;
 
   @include vp-1365 {

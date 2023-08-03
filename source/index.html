@@ -80,24 +80,21 @@
                 <img src="./img/gym-image-desktop.png" srcset="./img/gym-image-desktop@2x.png 2x" width="660" height="401" alt="Изображение тренажерного зала">
               </picture>
               <div class="about__video">
-                <!-- <a class="about__video-link" href="#"> -->
-                  <a class="about__video-button" href="https://www.youtube.com/embed/9TZXsZItgdw">
-                    <svg width="17" height="17">
-                      <use href="./img/sprite.svg#play"></use>
-                    </svg>
-                    <span class="visually-hidden">Показать видео ролик</span>
-                  </a>
-                  <picture>
-                    <source type="image/webp" media="(max-width:767px)" srcset="./img/gym-video-mobile.webp 1x, ./img/gym-video-mobile@2x.webp 2x" width="320" height="167">
-                    <source type="image/webp" media="(max-width:1199px)" srcset="./img/gym-video-tablet.webp 1x, ./img/gym-video-tablet@2x.webp 2x" width="266" height="167">
-                    <source type="image/webp" srcset="./img/gym-video-desktop.webp 1x, ./img/gym-video-desktop@2x.webp 2x" width="364" height="228">
-                    <source media="(max-width:767px)" srcset="./img/gym-video-mobile.png 1x, ./img/gym-video-mobile@2x.png 2x" width="320" height="167">
-                    <source media="(max-width:1199px)" srcset="./img/gym-video-tablet.png 1x, ./img/gym-video-tablet@2x.png 2x" width="266" height="167">
-                    <img src="./img/gym-video-desktop.png" srcset="./img/gym-video-desktop@2x.png 2x" width="364" height="228" alt="Видео о тренажерном зале">
-                  </picture>
-                  <div class="about__video-player" id="player"></div>
-                <!-- </a> -->
-
+                <a class="about__video-button" href="https://www.youtube.com/embed/9TZXsZItgdw" target="_blank">
+                  <svg width="17" height="17">
+                    <use href="./img/sprite.svg#play"></use>
+                  </svg>
+                  <span class="visually-hidden">Показать видео ролик</span>
+                </a>
+                <picture>
+                  <source type="image/webp" media="(max-width:767px)" srcset="./img/gym-video-mobile.webp 1x, ./img/gym-video-mobile@2x.webp 2x" width="320" height="167">
+                  <source type="image/webp" media="(max-width:1199px)" srcset="./img/gym-video-tablet.webp 1x, ./img/gym-video-tablet@2x.webp 2x" width="266" height="167">
+                  <source type="image/webp" srcset="./img/gym-video-desktop.webp 1x, ./img/gym-video-desktop@2x.webp 2x" width="364" height="228">
+                  <source media="(max-width:767px)" srcset="./img/gym-video-mobile.png 1x, ./img/gym-video-mobile@2x.png 2x" width="320" height="167">
+                  <source media="(max-width:1199px)" srcset="./img/gym-video-tablet.png 1x, ./img/gym-video-tablet@2x.png 2x" width="266" height="167">
+                  <img src="./img/gym-video-desktop.png" srcset="./img/gym-video-desktop@2x.png 2x" width="364" height="228" alt="Видео о тренажерном зале">
+                </picture>
+                <div class="about__video-player" id="player"></div>
               </div>
             </div>
           </div>
@@ -172,7 +169,7 @@
                           </svg>
                           <span>2700</span>
                         </div>
-                        <a class="btn programm__button">
+                        <a class="btn programm__button" href="#">
                           <span>Купить абонемент</span>
                         </a>
                       </div>
@@ -295,22 +292,12 @@
             <div class="events__wrapper">
               <div class="events__game-description">
                 <h2>Super Games</h2>
-                <div class="events__info">
-                  <div class="events__date">
-                    <span>Дата</span>
-                    <div class="events__date-description">
-                      <p>7</p>
-                      <span>Марта</span>
-                      <span>2019</span>
-                    </div>
-                  </div>
-                  <div class="events__date">
-                    <span>Время</span>
-                    <div class="events__date-description">
-                      <p>12:00</p>
-                    </div>
-                  </div>
-                </div>
+                <dl>
+                  <dt>Дата</dt>
+                  <dd>7 <span>Марта 2019</span></dd>
+                  <dt>Время</dt>
+                  <dd>12:00</dd>
+                </dl>
                 <p>Ежегодные соревнования по CrossFit</p>
                 <a class="btn events__link" href="#">Заполнить анкету</a>
               </div>

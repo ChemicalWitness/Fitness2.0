@@ -6,19 +6,22 @@ function findVideo() {
 
   let player = document.querySelector(".about__video-player");
   let link = document.querySelector(".about__video-button");
-
-  link.addEventListener("click", (evt) => {
-    evt.preventDefault();
-    player.classList.add("is-show");
-    new YT.Player(player, {
-      // height: '228',
-      // width: '364',
-      videoId: "9TZXsZItgdw",
-      events: {
-        onReady: (e) => e.target.playVideo()
-      }
+  if (!player || !link) {
+    return;
+  } else {
+    link.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      player.classList.add("is-show");
+      new YT.Player(player, {
+        // height: '228',
+        // width: '364',
+        videoId: "9TZXsZItgdw",
+        events: {
+          onReady: (e) => e.target.playVideo()
+        }
+      });
+      evt.stopPropagation();
     });
-    evt.stopPropagation();
-  });
+  }
 }
 export {findVideo}
