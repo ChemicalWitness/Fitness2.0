@@ -15,6 +15,9 @@ export class Accordions {
 
   _documentClickHandler(evt) {
     const target = evt.target;
+    if (!target.closest('[data-accordion="button"]') && !target.closest('[data-accordion="element"]')) {
+      return;
+    }
 
     evt.preventDefault();
     const parent = target.closest('[data-accordion="parent"]');
