@@ -2862,6 +2862,8 @@ button,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
+  max-width: 1366px;
 }
 
 .slider__inner-wrapper {
@@ -3920,6 +3922,7 @@ button,
   width: 100%;
   position: relative;
   border-bottom: 1px rgba(28, 51, 116, 0.2) solid;
+  cursor: pointer;
 }
 
 .questions-list__item:first-child {
