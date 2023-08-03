@@ -142,6 +142,7 @@
   }
 
   @include vp-767 {
+    margin: 0 auto;
     margin-top: 8px;
   }
 }
@@ -151,4 +152,8 @@
   margin: 0;
 
   @include font(300, 16px, 22px);
+
+  @include vp-767 {
+    margin: 0 auto;
+  }
 }

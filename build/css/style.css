@@ -3447,6 +3447,7 @@ button,
 }
 @media (max-width: 767px) {
   .benefits-card__description h3 {
+    margin: 0 auto;
     margin-top: 8px;
   }
 }
@@ -3457,6 +3458,11 @@ button,
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
+}
+@media (max-width: 767px) {
+  .benefits-card__description p {
+    margin: 0 auto;
+  }
 }
 
 .stock {
@@ -3916,7 +3922,7 @@ button,
 .category-list__button.is-active {
   background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   color: #ffffff;
-  border: none;
+  border: 1px solid transparent;
 }
 
 .questions-list {
@@ -4128,6 +4134,9 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #102654;
   color: #ffffff;
 }
