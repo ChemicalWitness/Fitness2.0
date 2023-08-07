@@ -23,7 +23,7 @@
     line-height: 19px;
   }
 
-  @include hover {
+  &:hover:not(:active) {
     border-bottom: 1px $borderOnDarkBg solid;
   }
 

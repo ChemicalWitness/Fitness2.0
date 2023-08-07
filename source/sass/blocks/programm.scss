@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: center;
   }
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .programm__item {
@@ -41,7 +45,7 @@
   }
 
   @include vp-767 {
-    width: 290px;
+    width: 100%;
     margin-bottom: 35px;
 
     &:first-child {
@@ -64,6 +68,10 @@
   }
 
   @include vp-767 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 50px 42px;
     padding-bottom: 54px;
   }
@@ -204,4 +212,8 @@
   width: 206px;
   padding: 23px 37px;
   border: 2px solid #102654;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }

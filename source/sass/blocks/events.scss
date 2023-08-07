@@ -37,6 +37,15 @@
     padding: 51px 45px;
     gap: 5px 30px;
   }
+
+  @include vp-767 {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.events__game-description dl {
+  margin: 0;
 }
 
 .events__game-description h2 {
@@ -55,10 +64,7 @@
     font-size: 48px;
     line-height: 46px;
   }
-}
 
-.events__game-description dl {
-  margin: 0;
 }
 
 .events__game-description dt {
@@ -153,5 +159,27 @@
 
     font-size: 10px;
     line-height: 12px;
+  }
+}
+
+.events__image {
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.events__image img {
+  height: 500px;
+  object-fit: cover;
+
+  @include vp-1365 {
+    width: 100%;
+    height: 292px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    object-fit: cover;
+    height: 292px;
   }
 }

@@ -27,8 +27,13 @@
 
 .hero__wrapper img {
   margin-top: -40px;
+  width: 500px;
+  height: 556px;
+  object-fit: cover;
 
   @include vp-1365 {
+    width: 324px;
+    height: 390px;
     margin: 0;
     margin-top: -7px;
   }
@@ -51,9 +56,22 @@
     padding: 0;
     align-items: flex-end;
   }
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
-.hero__inner-wrapper p {
+.hero__description {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero__description p {
   margin: 0;
   margin-bottom: 14px;
   padding: 0;
@@ -80,7 +98,7 @@
   }
 }
 
-.hero__inner-wrapper h2 {
+.hero__description h2 {
   max-width: 300px;
   margin: 0;
   margin-bottom: 45px;
@@ -112,8 +130,8 @@
   margin: 0;
   list-style-type: none;
   position: absolute;
-  left: 20px;
-  bottom: 190px;
+  left: -70px;
+  bottom: 80px;
   font-family: $robotoCondensed;
   font-size: 14px;
   line-height: 21px;
@@ -121,12 +139,12 @@
   text-align: end;
 
   @include vp-1365 {
-    left: -20px;
-    bottom: 150px;
+    left: -30px;
+    bottom: 50px;
   }
 
   @include vp-767 {
-    bottom: 110px;
+    bottom: 60px;
     left: 0;
   }
 }
@@ -142,7 +160,7 @@
 
   @include vp-1365 {
     max-width: 190px;
-    padding: 24px 32px;
+    padding: 20px 32px;
   }
 
   @include vp-767 {

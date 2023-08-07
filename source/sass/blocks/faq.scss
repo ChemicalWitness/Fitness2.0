@@ -4,6 +4,8 @@
 
 .faq__wrapper {
   padding: 120px 0;
+  margin: 0 auto;
+  max-width: 1160px;
 
   @include vp-1365 {
     padding: 95px 0;

@@ -22,3 +22,12 @@
     letter-spacing: 0.4px;
   }
 }
+
+.main-nav__link:hover:not(:disabled),
+.main-nav__link:focus-visible:not(:disabled) {
+  opacity: 0.8;
+}
+
+.main-nav__link:active:not(:disabled) {
+  opacity: 0.3;
+}

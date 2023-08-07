@@ -35,13 +35,24 @@
 
 .stock-card__link {
   display: block;
+  position: relative;
+  padding: 5px;
   color: inherit;
-  max-width: 68px;
+  max-width: 80px;
 
   @include font(700, 12px, 14px);
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  border-bottom: 1px #1c3374 solid;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    top: 0;
+    left: 3px;
+    border-bottom: 1px $borderOnLightBg solid;
+  }
 
   @include vp-767 {
     margin: 0 auto;
@@ -53,9 +64,12 @@
 }
 
 .stock-card__link:focus-visible:not(:disabled) {
-  max-width: 80px;
-  padding: 5px;
-  border: 1px $mainColorText solid;
+  &::after {
+    width: 80px;
+    top: 2px;
+    left: -1px;
+    border: 1px $mainColorText solid;
+  }
   outline: none;
 }
 

@@ -25,6 +25,7 @@
   line-height: 18px;
   font-weight: 500;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1365 {
     width: 162px;

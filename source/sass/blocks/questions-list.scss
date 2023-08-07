@@ -8,7 +8,6 @@
   width: 100%;
   position: relative;
   border-bottom: 1px rgba(28, 51, 116, 0.2) solid;
-  cursor: pointer;
 }
 
 .questions-list__item:first-child {
@@ -18,6 +17,7 @@
 .questions-list__item h3 {
   margin: 0;
   padding: 0;
+  padding-right: 50px;
   margin-top: 32px;
   margin-bottom: 14px;
 

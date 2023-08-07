@@ -1,9 +1,16 @@
 .feedback {
-  background-color: $mainColorBg;
+  background: linear-gradient(90deg, #102654 50%, #ffffff 50%);
+  border-top: 1px #74819c solid;
+
+  @include vp-1365 {
+    background: $mainColorBg;
+  }
 }
 
 .feedback__wrapper {
   width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
   display: flex;
 
   @include vp-1365 {

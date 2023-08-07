@@ -44,9 +44,10 @@
 
 .stock__inner-wrapper {
   display: flex;
-  justify-content: space-between;
+  margin: 0 auto;
   gap: 40px;
   width: 100%;
+  max-width: 1160px;
 
   @include vp-1365 {
     flex-direction: column;
@@ -66,6 +67,8 @@
 
   @include vp-1365 {
     flex-direction: row;
+    margin: 0 auto;
+    max-width: 678px;
     width: 100%;
     gap: 30px;
   }
@@ -76,7 +79,7 @@
 }
 
 .stock__item {
-  padding: 20px 25px;
+  padding: 18px 25px;
   width: 100%;
 
   @include vp-767 {

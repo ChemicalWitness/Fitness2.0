@@ -38,6 +38,7 @@
   background-color: transparent;
   opacity: 0.5;
   cursor: pointer;
+  user-select: none;
 
   @include font(400, 20px, 30px);
   color: $mainColorText;

@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png">
+    <link rel="icon" href="./img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="manifest" href="./img/favicon/manifest.json">
     <link rel="preload" href="./fonts/AlumniSans-Bold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/AlumniSans-SemiBold.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/AlumniSans-ExtraBold.woff2" as="font" crossorigin="anonymous">
@@ -37,13 +42,15 @@
             <h2 class="visually-hidden">Промо-блок</h2>
             <div class="hero__wrapper">
               <div class="hero__inner-wrapper">
-                <p>Омск</p>
-                <h2>Фитнес центр</h2>
-                <ul class="hero__info-list">
-                  <li>Тренажёрный зал</li>
-                  <li>Групповые занятия</li>
-                  <li>Кардио-зона</li>
-                </ul>
+                <div class="hero__description">
+                  <p>Омск</p>
+                  <h2>Фитнес центр</h2>
+                  <ul class="hero__info-list">
+                    <li>Тренажёрный зал</li>
+                    <li>Групповые занятия</li>
+                    <li>Кардио-зона</li>
+                  </ul>
+                </div>
                 <a class="hero__button btn" href="#subscriptions">Купить абонемент</a>
               </div>
               <picture>
@@ -101,7 +108,6 @@
         </section>
 
         <section class="subscriptions" id="subscriptions">
-          <div class="container">
             <div class="subscriptions__wrapper">
               <h2>Абонементы</h2>
               <div class="subscriptions__tabs" data-tabs="parent">
@@ -312,178 +318,180 @@
                 </picture>
               </div>
             </div>
-          </div>
         </section>
 
         <section class="slider">
           <div class="slider__title">
             <h2>Тренеры</h2>
           </div>
-          <div class="slider__inner-wrapper swiper">
-            <div class="slider__list swiper-wrapper">
-              <div class="swiper-slide slider-card">
-                <div class="slider-card__image">
-                  <picture>
-                    <source type="image/webp" srcset="./img/trainer-1.webp 1x, ./img/trainer-1@2x.webp 2x" width="260" height="294">
-                    <img src="./img/trainer-1.png" srcset="./img/trainer-1@2x.png 2x" width="260" height="294" alt="Тренер Анна Павлова">
-                  </picture>
-                </div>
-                <h3>Анна Павлова</h3>
-                <div class="slider-card__info">
+          <div class="slider__wrapper">
+            <div class="slider__inner-wrapper swiper">
+              <div class="slider__list swiper-wrapper">
+                <div class="swiper-slide slider-card">
+                  <div class="slider-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./img/trainer-1.webp 1x, ./img/trainer-1@2x.webp 2x" width="260" height="294">
+                      <img src="./img/trainer-1.png" srcset="./img/trainer-1@2x.png 2x" width="260" height="294" alt="Тренер Анна Павлова">
+                    </picture>
+                  </div>
                   <h3>Анна Павлова</h3>
-                  <span>CrossFit</span>
-                  <ul class="slider-card__info-list">
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                  </ul>
+                  <div class="slider-card__info">
+                    <h3>Анна Павлова</h3>
+                    <span>CrossFit</span>
+                    <ul class="slider-card__info-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                      <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide slider-card">
-                <div class="slider-card__image">
-                  <picture>
-                    <source type="image/webp" srcset="./img/trainer-2.webp 1x, ./img/trainer-2@2x.webp 2x" width="260" height="294">
-                    <img src="./img/trainer-2.png" srcset="./img/trainer-2@2x.png 2x" width="260" height="294" alt="Тренер Алексей Лавров">
-                  </picture>
-                </div>
-                <h3>Алексей Лавров</h3>
-                <div class="slider-card__info">
+                <div class="swiper-slide slider-card">
+                  <div class="slider-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./img/trainer-2.webp 1x, ./img/trainer-2@2x.webp 2x" width="260" height="294">
+                      <img src="./img/trainer-2.png" srcset="./img/trainer-2@2x.png 2x" width="260" height="294" alt="Тренер Алексей Лавров">
+                    </picture>
+                  </div>
                   <h3>Алексей Лавров</h3>
-                  <span>CrossFit</span>
-                  <ul class="slider-card__info-list">
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                  </ul>
+                  <div class="slider-card__info">
+                    <h3>Алексей Лавров</h3>
+                    <span>CrossFit</span>
+                    <ul class="slider-card__info-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                      <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide slider-card">
-                <div class="slider-card__image">
-                  <picture>
-                    <source type="image/webp" srcset="./img/trainer-3.webp 1x, ./img/trainer-3@2x.webp 2x" width="260" height="294">
-                    <img src="./img/trainer-3.png" srcset="./img/trainer-3@2x.png 2x" width="260" height="294" alt="Тренер Александр Пашков">
-                  </picture>
-                </div>
-                <h3>Александр Пашков</h3>
-                <div class="slider-card__info">
+                <div class="swiper-slide slider-card">
+                  <div class="slider-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./img/trainer-3.webp 1x, ./img/trainer-3@2x.webp 2x" width="260" height="294">
+                      <img src="./img/trainer-3.png" srcset="./img/trainer-3@2x.png 2x" width="260" height="294" alt="Тренер Александр Пашков">
+                    </picture>
+                  </div>
                   <h3>Александр Пашков</h3>
-                  <span>CrossFit</span>
-                  <ul class="slider-card__info-list">
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                  </ul>
+                  <div class="slider-card__info">
+                    <h3>Александр Пашков</h3>
+                    <span>CrossFit</span>
+                    <ul class="slider-card__info-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                      <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide slider-card">
-                <div class="slider-card__image">
-                  <picture>
-                    <source type="image/webp" srcset="./img/trainer-4.webp 1x, ./img/trainer-4@2x.webp 2x" width="260" height="294">
-                    <img src="./img/trainer-4.png" srcset="./img/trainer-4@2x.png 2x" width="260" height="294" alt="Тренер Мария Кетова">
-                  </picture>
-                </div>
-                <h3>Мария Кетова</h3>
-                <div class="slider-card__info">
+                <div class="swiper-slide slider-card">
+                  <div class="slider-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./img/trainer-4.webp 1x, ./img/trainer-4@2x.webp 2x" width="260" height="294">
+                      <img src="./img/trainer-4.png" srcset="./img/trainer-4@2x.png 2x" width="260" height="294" alt="Тренер Мария Кетова">
+                    </picture>
+                  </div>
                   <h3>Мария Кетова</h3>
-                  <span>CrossFit</span>
-                  <ul class="slider-card__info-list">
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                  </ul>
+                  <div class="slider-card__info">
+                    <h3>Мария Кетова</h3>
+                    <span>CrossFit</span>
+                    <ul class="slider-card__info-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                      <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide slider-card">
-                <div class="slider-card__image">
-                  <picture>
-                    <source type="image/webp" srcset="./img/trainer-1.webp 1x, ./img/trainer-1@2x.webp 2x" width="260" height="294">
-                    <img src="./img/trainer-1.png" srcset="./img/trainer-1@2x.png 2x" width="260" height="294" alt="Тренер Екатерина Смелая">
-                  </picture>
-                </div>
-                <h3>Екатерина Смелая</h3>
-                <div class="slider-card__info">
+                <div class="swiper-slide slider-card">
+                  <div class="slider-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./img/trainer-1.webp 1x, ./img/trainer-1@2x.webp 2x" width="260" height="294">
+                      <img src="./img/trainer-1.png" srcset="./img/trainer-1@2x.png 2x" width="260" height="294" alt="Тренер Екатерина Смелая">
+                    </picture>
+                  </div>
                   <h3>Екатерина Смелая</h3>
-                  <span>CrossFit</span>
-                  <ul class="slider-card__info-list">
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                  </ul>
+                  <div class="slider-card__info">
+                    <h3>Екатерина Смелая</h3>
+                    <span>CrossFit</span>
+                    <ul class="slider-card__info-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                      <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide slider-card">
-                <div class="slider-card__image">
-                  <picture>
-                    <source type="image/webp" srcset="./img/trainer-2.webp 1x, ./img/trainer-2@2x.webp 2x" width="260" height="294">
-                    <img src="./img/trainer-2.png" srcset="./img/trainer-2@2x.png 2x" width="260" height="294" alt="Тренер Олег Кононенко">
-                  </picture>
-                </div>
-                <h3>Олег Кононенко</h3>
-                <div class="slider-card__info">
+                <div class="swiper-slide slider-card">
+                  <div class="slider-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./img/trainer-2.webp 1x, ./img/trainer-2@2x.webp 2x" width="260" height="294">
+                      <img src="./img/trainer-2.png" srcset="./img/trainer-2@2x.png 2x" width="260" height="294" alt="Тренер Олег Кононенко">
+                    </picture>
+                  </div>
                   <h3>Олег Кононенко</h3>
-                  <span>CrossFit</span>
-                  <ul class="slider-card__info-list">
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                  </ul>
+                  <div class="slider-card__info">
+                    <h3>Олег Кононенко</h3>
+                    <span>CrossFit</span>
+                    <ul class="slider-card__info-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                      <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide slider-card">
-                <div class="slider-card__image">
-                  <picture>
-                    <source type="image/webp" srcset="./img/trainer-3.webp 1x, ./img/trainer-3@2x.webp 2x" width="260" height="294">
-                    <img src="./img/trainer-3.png" srcset="./img/trainer-3@2x.png 2x" width="260" height="294" alt="Тренер Виталий Зарубов">
-                  </picture>
-                </div>
-                <h3>Виталий Зарубов</h3>
-                <div class="slider-card__info">
+                <div class="swiper-slide slider-card">
+                  <div class="slider-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./img/trainer-3.webp 1x, ./img/trainer-3@2x.webp 2x" width="260" height="294">
+                      <img src="./img/trainer-3.png" srcset="./img/trainer-3@2x.png 2x" width="260" height="294" alt="Тренер Виталий Зарубов">
+                    </picture>
+                  </div>
                   <h3>Виталий Зарубов</h3>
-                  <span>CrossFit</span>
-                  <ul class="slider-card__info-list">
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                  </ul>
+                  <div class="slider-card__info">
+                    <h3>Виталий Зарубов</h3>
+                    <span>CrossFit</span>
+                    <ul class="slider-card__info-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                      <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
 
-              <div class="swiper-slide slider-card">
-                <div class="slider-card__image">
-                  <picture>
-                    <source type="image/webp" srcset="./img/trainer-4.webp 1x, ./img/trainer-4@2x.webp 2x" width="260" height="294">
-                    <img src="./img/trainer-4.png" srcset="./img/trainer-4@2x.png 2x" width="260" height="294" alt="Тренер Олеся Гордиенко">
-                  </picture>
-                </div>
-                <h3>Олеся Гордиенко</h3>
-                <div class="slider-card__info">
+                <div class="swiper-slide slider-card">
+                  <div class="slider-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./img/trainer-4.webp 1x, ./img/trainer-4@2x.webp 2x" width="260" height="294">
+                      <img src="./img/trainer-4.png" srcset="./img/trainer-4@2x.png 2x" width="260" height="294" alt="Тренер Олеся Гордиенко">
+                    </picture>
+                  </div>
                   <h3>Олеся Гордиенко</h3>
-                  <span>CrossFit</span>
-                  <ul class="slider-card__info-list">
-                    <li>Certified Level 3 Trainer</li>
-                    <li>Победитель чемпионата России по&nbsp;CrossFit</li>
-                    <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
-                  </ul>
+                  <div class="slider-card__info">
+                    <h3>Олеся Гордиенко</h3>
+                    <span>CrossFit</span>
+                    <ul class="slider-card__info-list">
+                      <li>Certified Level 3 Trainer</li>
+                      <li>Победитель чемпионата России по&nbsp;CrossFit</li>
+                      <li>Опыт&nbsp;&mdash; 6&nbsp;лет</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
+            <button class="slider__control slider__control--prev" type="button" aria-label="На предыдущий слайд">
+              <svg width="16" height="32">
+                <use href="./img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="slider__control slider__control--next" type="button" aria-label="На следующий слайд">
+              <svg width="16" height="32">
+                <use href="./img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
           </div>
-          <button class="slider__control slider__control--prev" type="button" aria-label="На предыдущий слайд">
-            <svg width="16" height="32">
-              <use href="./img/sprite.svg#arrow"></use>
-            </svg>
-          </button>
-          <button class="slider__control slider__control--next" type="button" aria-label="На следующий слайд">
-            <svg width="16" height="32">
-              <use href="./img/sprite.svg#arrow"></use>
-            </svg>
-          </button>
+
         </section>
 
         <section class="benefits">
@@ -731,10 +739,10 @@
                     <source media="(max-width:767px)" srcset="./img/review-image-mobile.png 1x, ./img/review-image-mobile@2x.png 2x" width="68" height="68">
                     <img src="./img/review-image.png" srcset="./img/review-image@2x.png 2x" width="80" height="80" alt="Изображение клиента">
                   </picture>
-                  <div class="reviews__info">
+                  <!-- <div class="reviews__info"> -->
                     <h3>Анна Фролова</h3>
                     <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                  </div>
+                  <!-- </div> -->
                 </div>
                 <div class="reviews__slider-slide swiper-slide">
                   <picture>
@@ -743,23 +751,22 @@
                     <source media="(max-width:767px)" srcset="./img/review-image-mobile.png 1x, ./img/review-image-mobile@2x.png 2x" width="68" height="68">
                     <img src="./img/review-image.png" srcset="./img/review-image@2x.png 2x" width="80" height="80" alt="Изображение клиента">
                   </picture>
-                  <div class="reviews__info">
-                    <h3>Анастасия Екименко</h3>
-                    <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                  </div>
+                  <h3>Анастасия Екименко</h3>
+                  <p>&laquo;Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
                 </div>
               </div>
+              <button class="reviews__control reviews__control--prev" type="button" aria-label="На предыдущий слайд">
+                <svg width="16" height="32">
+                  <use href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+              <button class="reviews__control reviews__control--next" type="button" aria-label="На следующий слайд">
+                <svg width="16" height="32">
+                  <use href="./img/sprite.svg#arrow"></use>
+                </svg>
+              </button>
             </div>
-            <button class="reviews__control reviews__control--prev" type="button" aria-label="На предыдущий слайд">
-              <svg width="16" height="32">
-                <use href="./img/sprite.svg#arrow"></use>
-              </svg>
-            </button>
-            <button class="reviews__control reviews__control--next" type="button" aria-label="На следующий слайд">
-              <svg width="16" height="32">
-                <use href="./img/sprite.svg#arrow"></use>
-              </svg>
-            </button>
+
           </div>
         </section>
 

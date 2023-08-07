@@ -3,15 +3,16 @@
 }
 
 .reviews__wrapper {
-  position: relative;
   padding: 120px 103px;
+  margin: 0 auto;
+  max-width: 1366px;
 
   @include vp-1365 {
-    padding: 95px 45px 100px 45px;
+    padding: 95px 0 100px 0;
   }
 
   @include vp-767 {
-    padding: 63px 15px 70px 15px;
+    padding: 63px 0 70px 0;
   }
 }
 
@@ -43,17 +44,22 @@
 }
 
 .reviews__slider {
-  width: 560px;
+  max-width: 1366px;
+  width: 700px;
+  padding: 0 70px;
+  position: relative;
   display: flex;
   margin: 0 auto;
   overflow: hidden;
 
   @include vp-1365 {
-    width: 566px;
+    max-width: 768px;
+    padding: 0 101px;
   }
 
   @include vp-767 {
-    width: 226px;
+    width: 100%;
+    padding: 0 47px;
   }
 }
 
@@ -63,10 +69,12 @@
 
 .reviews__slider-slide {
   position: relative;
+  max-width: 560px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 25px;
   padding: 50px;
-  display: flex;
-  justify-content: space-between;
-  background-color: $darkBg;
+  background-color: #1c3374;
   color: $textOnDarkBg;
 
   @include vp-1365 {
@@ -77,23 +85,27 @@
   }
 
   @include vp-767 {
+    max-width: none;
+    grid-template-columns: 51% 49%;
     padding: 20px;
-    display: block;
     padding-top: 50px;
+    gap: 10px 0;
   }
 }
 
 .reviews__slider-slide picture {
   width: 80px;
+  grid-row: 1/3;
 
   @include vp-767 {
-    position: absolute;
+    grid-row: 1/2;
+    justify-self: flex-end;
     left: 40px;
     top: 40px;
   }
 }
 
-.reviews__info h3 {
+.reviews__slider-slide h3 {
   max-width: 328px;
   margin: 0;
   margin-bottom: 10px;
@@ -101,13 +113,14 @@
   @include font(700, 20px, 30px);
 
   @include vp-767 {
+    max-width: 150px;
+    align-self: center;
     margin-bottom: 20px;
-    padding-left: 100px;
     line-height: 26px;
   }
 }
 
-.reviews__info p {
+.reviews__slider-slide p {
   max-width: 328px;
   margin: 0;
   margin-bottom: 10px;
@@ -116,6 +129,8 @@
   line-height: 22px;
 
   @include vp-767 {
+    grid-column: span 2;
+    justify-self: center;
     text-align: center;
   }
 }
@@ -154,31 +169,31 @@
 
 .reviews__control--prev {
   transform: rotate(180deg);
-  top: 54%;
-  left: 22%;
+  top: 40%;
+  left: 0;
 
   @include vp-1365 {
-    top: 52%;
+    top: 40%;
     left: 20px;
   }
 
   @include vp-767 {
-    left: 8px;
+    left: 5px;
   }
 }
 
 .reviews__control--next {
   position: absolute;
-  top: 54%;
-  right: 22%;
+  top: 40%;
+  right: 0;
 
   @include vp-1365 {
-    top: 52%;
+    top: 40%;
     right: 20px;
   }
 
   @include vp-767 {
-    right: 8px;
+    right: 5px;
   }
 }
 

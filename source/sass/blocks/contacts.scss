@@ -8,12 +8,13 @@
 }
 
 .contacts__wrapper {
-  padding: 55px 140px 50px 120px;
-  border-top: 1px #74819c solid;
+  padding: 55px 60px 50px 80px;
   display: flex;
   flex-direction: column;
 
   @include vp-1365 {
+    max-width: 768px;
+    margin: 0 auto;
     padding: 55px 163px 65px 133px;
     border: none;
   }
@@ -128,4 +129,13 @@
     font-size: 18px;
     line-height: 27px;
   }
+}
+
+.contacts__link:hover,
+.contacts__link:focus-visible {
+  opacity: 0.8;
+}
+
+.contacts__link:active {
+  opacity: 0.3;
 }

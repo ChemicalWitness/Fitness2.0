@@ -16,6 +16,8 @@
 
 .main-footer__wrapper {
   display: grid;
+  max-width: 1160px;
+  margin: 0 auto;
   grid-template-columns: 95px 1fr auto;
   gap: 20px;
 
@@ -54,4 +56,13 @@
     height: 15px;
     margin-bottom: 23px;
   }
+}
+
+.main-footer__link:hover,
+.main-footer__link:focus-visible {
+  opacity: 0.8;
+}
+
+.main-footer__link:active {
+  opacity: 0.3;
 }

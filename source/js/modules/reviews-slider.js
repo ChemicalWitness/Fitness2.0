@@ -9,5 +9,16 @@ export const reviewSlider = () => {
       prevEl: '.reviews__control--prev',
     },
     slidesPerView: 1,
+    breakpoints: {
+      320: {
+        spaceBetween: 500,
+      },
+      768: {
+        spaceBetween: 500,
+      },
+      1200: {
+        spaceBetween: 100
+      }
+    }
   })
 }
