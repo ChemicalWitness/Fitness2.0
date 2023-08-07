@@ -54,7 +54,7 @@
 
   @include vp-1365 {
     max-width: 768px;
-    padding: 0 101px;
+    padding: 0 70px;
   }
 
   @include vp-767 {
@@ -72,8 +72,8 @@
   max-width: 560px;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 0 25px;
-  padding: 50px;
+  gap: 0 39px;
+  padding: 52px;
   background-color: #1c3374;
   color: $textOnDarkBg;
 
@@ -87,9 +87,9 @@
   @include vp-767 {
     max-width: none;
     grid-template-columns: 51% 49%;
-    padding: 20px;
+    padding: 23px;
     padding-top: 50px;
-    gap: 10px 0;
+    gap: 0;
   }
 }
 
@@ -174,7 +174,7 @@
 
   @include vp-1365 {
     top: 40%;
-    left: 20px;
+    left: 0;
   }
 
   @include vp-767 {
@@ -189,7 +189,7 @@
 
   @include vp-1365 {
     top: 40%;
-    right: 20px;
+    right: 0;
   }
 
   @include vp-767 {

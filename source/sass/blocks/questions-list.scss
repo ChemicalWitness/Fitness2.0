@@ -24,13 +24,14 @@
   @include font(500, 24px, 28px);
 
   @include vp-1365 {
-    max-width: 550px;
+    max-width: 600px;
   }
 
   @include vp-767 {
     width: 238px;
     margin-top: 20px;
-    margin-bottom: 8px;
+    padding: 0;
+    margin-bottom: 10px;
     font-size: 18px;
     line-height: 21px;
   }
@@ -43,8 +44,13 @@
   font-weight: 300;
   line-height: 25px;
 
+  @include vp-1365 {
+    padding-right: 90px;
+  }
+
   @include vp-767 {
     margin-bottom: 15px;
+    padding: 0;
     width: 290px;
     font-size: 16px;
     line-height: 22px;
@@ -72,6 +78,11 @@
     background-color: #1c3374;
     top: 50%;
     left: 25%;
+
+    @include vp-767 {
+      width: 12px;
+      left: 25%;
+    }
   }
 
   &::before {
@@ -83,16 +94,28 @@
     top: 11px;
     left: 19px;
     transform: rotate(180deg);
+
+    @include vp-767 {
+      height: 12px;
+      top: 9px;
+      left: 14px;
+    }
   }
 
   @include vp-767 {
-    top: 25%;
+    width: 32px;
+    height: 32px;
+    top: 40%;
   }
 }
 
 .questions-list__button.is-active {
   &::before {
     display: none;
+  }
+
+  @include vp-767 {
+    top: 18%;
   }
 }
 
