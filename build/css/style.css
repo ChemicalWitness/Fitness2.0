@@ -2953,6 +2953,11 @@ button,
     line-height: 18px;
   }
 }
+@media (max-width: 767px) {
+  .events__game-description p {
+    margin-left: -20px;
+  }
+}
 
 .events__link {
   grid-column: 1/-1;
@@ -2988,7 +2993,6 @@ button,
   .events__link {
     margin-top: 23px;
     padding: 12px 40px;
-    margin-left: -30px;
   }
 }
 
@@ -4839,6 +4843,7 @@ button,
   position: absolute;
   left: 0;
   bottom: -45px;
+  height: 44px;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
@@ -4850,10 +4855,6 @@ button,
 .custom-input .input-message.is-valid,
 .custom-textarea .input-message.is-valid {
   color: #15ab07;
-}
-
-.custom-input:first-child .input-message {
-  bottom: -25px;
 }
 
 .free-lesson {
