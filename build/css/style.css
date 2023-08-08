@@ -1895,6 +1895,7 @@ button,
   .hero__description h2 {
     margin-bottom: 30px;
     letter-spacing: 3.6px;
+    padding-left: 70px;
   }
 }
 
