@@ -3764,6 +3764,7 @@ button,
 }
 @media (max-width: 767px) {
   .stock__card-wrapper {
+    max-width: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

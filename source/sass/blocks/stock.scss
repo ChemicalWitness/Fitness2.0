@@ -74,6 +74,7 @@
   }
 
   @include vp-767 {
+    max-width: none;
     flex-direction: column;
   }
 }
