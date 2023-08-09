@@ -1,9 +1,11 @@
 .social-list {
+  max-width: 100px;
   display: flex;
   gap: 11px;
   padding: 0;
   margin: 0;
   list-style-type: none;
+  flex-wrap: wrap;
 
   @media (max-width: 767px) {
     justify-content: start;

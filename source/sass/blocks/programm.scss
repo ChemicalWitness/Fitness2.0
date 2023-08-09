@@ -3,8 +3,8 @@
   padding: 0;
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 20px 60px;
+  flex-wrap: wrap;
 
   @include vp-1365 {
     gap: 0;
@@ -20,7 +20,7 @@
 
 .programm__item {
   width: 360px;
-  height: auto;
+  height: 100%;
   margin-top: 35px;
   margin-bottom: 120px;
 

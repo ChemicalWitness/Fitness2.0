@@ -1,6 +1,7 @@
 .category-list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 8px;
 
   @include vp-1365 {
@@ -15,6 +16,7 @@
 
 .category-list__button {
   width: 260px;
+  height: 100%;
   margin: 0;
   padding: 18px 30px;
 

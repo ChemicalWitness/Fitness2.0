@@ -1,12 +1,16 @@
 .main-nav {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  z-index: 100;
+  gap: 10px;
+  padding-left: 122px;
 }
-
 
 .main-nav__link {
   font-family: $alumniSans;
+  margin-left: 0;
 
   @include font(600, 26px, 31px);
   letter-spacing: 0.78px;
@@ -20,6 +24,25 @@
   @include vp-767 {
     @include font(600, 20px, 24px);
     letter-spacing: 0.4px;
+  }
+}
+
+.main-nav__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: end;
+  gap: 15px;
+}
+
+.main-nav__link-logo {
+  padding-right: 30px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+
+  @include vp-767 {
+    top: 20px;
   }
 }
 

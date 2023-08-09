@@ -29,7 +29,17 @@
   }
 
   @include vp-767 {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
+  }
+}
+
+.stock-card:first-child p {
+  @include vp-1365 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 27px;
   }
 }
 
@@ -37,6 +47,7 @@
   display: block;
   position: relative;
   padding: 5px;
+  margin-top: auto;
   color: inherit;
   max-width: 80px;
 
