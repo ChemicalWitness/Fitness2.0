@@ -87,6 +87,7 @@
     padding: 0;
     margin-top: 40px;
     margin-bottom: 16px;
+    margin-right: 5px;
     font-size: 34px;
     line-height: 41px;
   }
@@ -141,8 +142,8 @@
   text-align: end;
 
   @include vp-1365 {
-    left: 0;
-    bottom: 50px;
+    left: -5px;
+    bottom: 55px;
   }
 
   @include vp-767 {

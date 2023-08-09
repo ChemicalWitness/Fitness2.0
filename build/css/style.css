@@ -1888,6 +1888,7 @@ button,
     padding: 0;
     margin-top: 40px;
     margin-bottom: 16px;
+    margin-right: 5px;
     font-size: 34px;
     line-height: 41px;
   }
@@ -1947,8 +1948,8 @@ button,
 }
 @media (max-width: 1199px) {
   .hero__info-list {
-    left: 0;
-    bottom: 50px;
+    left: -5px;
+    bottom: 55px;
   }
 }
 @media (max-width: 767px) {
