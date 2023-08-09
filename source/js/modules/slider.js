@@ -12,7 +12,7 @@ export const slider = () => {
         spaceBetween: 0,
 
       },
-      768: {
+      566: {
         slidesPerView: 2,
         spaceBetween: 30,
 

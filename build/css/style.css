@@ -2861,6 +2861,12 @@ button,
 .events__game-description dl {
   margin: 0;
 }
+@media (max-width: 767px) {
+  .events__game-description dl {
+    -ms-grid-column-align: self-start;
+        justify-self: self-start;
+  }
+}
 
 .events__game-description h2 {
   margin-top: 3px;
@@ -2883,8 +2889,10 @@ button,
 }
 @media (max-width: 767px) {
   .events__game-description h2 {
-    text-align: end;
     padding-left: 0;
+    max-width: 120px;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 
@@ -2956,7 +2964,7 @@ button,
 }
 @media (max-width: 767px) {
   .events__game-description p {
-    margin-left: -20px;
+    padding-right: 15px;
   }
 }
 
@@ -3083,6 +3091,8 @@ button,
 }
 @media (max-width: 767px) {
   .slider__inner-wrapper {
+    max-width: 566px;
+    max-height: none;
     margin-bottom: 70px;
   }
 }
@@ -3228,6 +3238,7 @@ button,
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  cursor: default;
 }
 @media (max-width: 1199px) {
   .slider-card {
@@ -3265,7 +3276,7 @@ button,
 @media (max-width: 767px) {
   .slider-card__image {
     width: 100%;
-    height: 274px;
+    height: 100%;
   }
 }
 
@@ -3276,6 +3287,11 @@ button,
   padding: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (max-width: 767px) {
+  .slider-card__image img {
+    height: auto;
+  }
 }
 
 .slider-card__info {
@@ -3946,7 +3962,7 @@ button,
 @media (max-width: 767px) {
   .stock-main-card__image img {
     width: 100%;
-    height: 299px;
+    height: auto;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -4479,6 +4495,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews__slider-slide picture {
+    padding-bottom: 10px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
@@ -4498,7 +4515,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews__slider-slide h3 {
-    max-width: 150px;
+    max-width: 100px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -4516,6 +4533,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews__slider-slide p {
+    max-width: 176px;
     -ms-grid-column-span: 2;
     grid-column: span 2;
     -ms-grid-column-align: center;
