@@ -3,8 +3,9 @@
   padding: 0;
   list-style-type: none;
   display: flex;
-  gap: 20px 60px;
+  gap: 20px 40px;
   flex-wrap: wrap;
+  justify-content: center;
 
   @include vp-1365 {
     gap: 0;

@@ -21,7 +21,7 @@
   margin-top: 32px;
   margin-bottom: 14px;
 
-  @include font(500, 24px, 28px);
+  @include font(600, 24px, 28px);
 
   @include vp-1365 {
     max-width: 600px;
