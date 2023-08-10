@@ -57,7 +57,7 @@
   display: none;
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   @include vp-1365 {
     width: 100%;
